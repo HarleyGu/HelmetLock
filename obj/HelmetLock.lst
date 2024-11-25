@@ -1,0 +1,2544 @@
+
+HelmetLock.elf:     file format elf32-littleriscv
+HelmetLock.elf
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000004 memsz 0x00000004 flags r-x
+    LOAD off    0x00002000 vaddr 0x20000000 paddr 0x00000004 align 2**12
+         filesz 0x00000a0c memsz 0x00000a0c flags r-x
+    LOAD off    0x00002a10 vaddr 0x00000a10 paddr 0x00000a10 align 2**12
+         filesz 0x00000558 memsz 0x00000558 flags r-x
+    LOAD off    0x00003a0c vaddr 0x20000a0c paddr 0x00000f68 align 2**12
+         filesz 0x00000000 memsz 0x00000004 flags rw-
+    LOAD off    0x00003a10 vaddr 0x20000a10 paddr 0x00000f68 align 2**12
+         filesz 0x00000000 memsz 0x00000008 flags rw-
+    LOAD off    0x00003e00 vaddr 0x20007e00 paddr 0x20007e00 align 2**12
+         filesz 0x00000000 memsz 0x00000200 flags rw-
+
+Sections:
+Idx Name            Size      VMA       LMA       File off  Algn  Flags
+  0 .init           00000004  00000000  00000000  00001000  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .highcodelalign 00000000  00000004  00000004  00002f68  2**0  CONTENTS
+  2 .highcode       00000a0c  20000000  00000004  00002000  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .text           00000558  00000a10  00000a10  00002a10  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .fini           00000000  00000f68  00000f68  00002f68  2**0  CONTENTS, ALLOC, LOAD, CODE
+  5 .dlalign        00000000  00000f68  00000f68  00002f68  2**0  CONTENTS
+  6 .data           00000004  20000a0c  00000f68  00003a0c  2**0  ALLOC
+  7 .bss            00000008  20000a10  00000f68  00003a10  2**2  ALLOC
+  8 .stack          00000200  20007e00  20007e00  00003e00  2**0  ALLOC
+  9 .debug_info     000047e7  00000000  00000000  00002f68  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev   00000c37  00000000  00000000  0000774f  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc      00000cb5  00000000  00000000  00008386  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_aranges  00000198  00000000  00000000  00009040  2**3  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges   000001a0  00000000  00000000  000091d8  2**3  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_line     00002ee6  00000000  00000000  00009378  2**0  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_str      00000ebc  00000000  00000000  0000c25e  2**0  CONTENTS, READONLY, DEBUGGING
+ 16 .comment        00000033  00000000  00000000  0000d11a  2**0  CONTENTS, READONLY
+ 17 .debug_frame    000002d4  00000000  00000000  0000d150  2**2  CONTENTS, READONLY, DEBUGGING
+ 18 .stabstr        00000117  00000000  00000000  0000d424  2**0  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .init	00000000 .init
+00000004 l    d  .highcodelalign	00000000 .highcodelalign
+20000000 l    d  .highcode	00000000 .highcode
+00000a10 l    d  .text	00000000 .text
+00000f68 l    d  .fini	00000000 .fini
+00000f68 l    d  .dlalign	00000000 .dlalign
+20000a0c l    d  .data	00000000 .data
+20000a10 l    d  .bss	00000000 .bss
+20007e00 l    d  .stack	00000000 .stack
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .stabstr	00000000 .stabstr
+00000000 l    df *ABS*	00000000 ./Startup/startup_CH583.o
+20000000 l       .highcode	00000000 _vector_base
+00000000 l    df *ABS*	00000000 CH58x_sys.c
+00000000 l    df *ABS*	00000000 ISP583.c
+200005f8 l       .highcode	00000000 .loop18
+20000606 l       .highcode	00000000 .loop29
+20000614 l       .highcode	00000000 .loop40
+200008a0 l       .highcode	00000000 .loop402
+00000000 l    df *ABS*	00000000 Main.c
+00000000 l    df *ABS*	00000000 CH58x_gpio.c
+00000000 l    df *ABS*	00000000 CH58x_uart1.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 close.c
+00000e82 g     F .text	00000028 UART1_SendString
+20000614 g     F .highcode	0000000e FLASH_ROM_OUT
+00000afe g     F .text	0000001e Motor_Stop
+20001210 g       .data	00000000 __global_pointer$
+200005b0 g     F .highcode	0000000e mDelayuS
+200004de  w    F .highcode	000000d2 HardFault_Handler
+20000090  w      .highcode	00000000 GPIOB_IRQHandler
+20000090  w      .highcode	00000000 GPIOA_IRQHandler
+20000090  w      .highcode	00000000 SysTick_Handler
+00000ae0 g     F .text	0000001e Motor_Reverse
+20000090  w      .highcode	00000000 NMI_Handler
+20000090  w      .highcode	00000000 UART1_IRQHandler
+20000a10 g       .bss	00000000 _sbss
+00000200 g       *ABS*	00000000 __stack_size
+20000606 g     F .highcode	0000000e FLASH_ROM_IN
+20000090  w      .highcode	00000000 UART0_IRQHandler
+00000004 g       .init	00000000 _einit
+20000090  w      .highcode	00000000 BB_IRQHandler
+200006a2 g     F .highcode	0000036a FLASH_EEPROM_CMD
+20000090  w      .highcode	00000000 Break_Point_Handler
+20000090  w      .highcode	00000000 TMR0_IRQHandler
+200005e6 g     F .highcode	00000012 FLASH_ROM_BEG
+20000a11 g     O .bss	00000001 Motor_State_Flag
+200005be g     F .highcode	00000028 mDelaymS
+20000090  w      .highcode	00000000 Ecall_M_Mode_Handler
+20007e00 g       .stack	00000000 _heap_end
+20000622 g     F .highcode	00000048 FLASH_ROM_ADDR
+20000090  w      .highcode	00000000 RTC_IRQHandler
+20000a18 g       .bss	00000000 _ebss
+00000e50 g     F .text	00000032 UART1_DefInit
+2000066a g     F .highcode	00000038 FLASH_ROM_WAIT
+20000090  w      .highcode	00000000 UART2_IRQHandler
+20000090  w      .highcode	00000000 PWMX_IRQHandler
+00000000 g       .init	00000000 _start
+20000090  w      .highcode	00000000 ADC_IRQHandler
+20000000 g       .highcode	00000000 _highcode_vma_start
+20000090  w      .highcode	00000000 TMR2_IRQHandler
+20000a14 g     O .bss	00000004 IRQ_STA
+20000a0c g       .data	00000000 _data_vma
+20000092 g     F .highcode	000003ce SetSysClock
+20000090  w      .highcode	00000000 USB_IRQHandler
+20000090  w      .highcode	00000000 I2C_IRQHandler
+00000b36 g     F .text	00000202 main
+00000ac2 g     F .text	0000001e Motor_Forward
+20000090  w      .highcode	00000000 USB2_IRQHandler
+00000004 g       .highcodelalign	00000000 _highcode_lma
+20000090  w      .highcode	00000000 LLE_IRQHandler
+00000000 g       .init	00000000 _sinit
+20000090  w      .highcode	00000000 WDOG_BAT_IRQHandler
+20000090  w      .highcode	00000000 Ecall_U_Mode_Handler
+20000090  w      .highcode	00000000 TMR3_IRQHandler
+20008000 g       .stack	00000000 _eusrstack
+20000090  w      .highcode	00000000 SW_Handler
+00000d38 g     F .text	000000a6 GPIOA_ModeCfg
+00000dde g     F .text	00000042 GetSysClock
+20000a10 g       .data	00000000 _edata
+20000090  w      .highcode	00000000 SPI0_IRQHandler
+20000a18 g       .bss	00000000 _end
+20000a0c g       .highcode	00000000 _highcode_vma_end
+00000f68 g       .dlalign	00000000 _data_lma
+00000a10  w      .text	00000000 handle_reset
+00000eaa g     F .text	00000012 strlen
+20000090  w      .highcode	00000000 UART3_IRQHandler
+200005f8 g     F .highcode	0000000e FLASH_ROM_END
+20000a10 g     O .bss	00000001 Correct_Count
+00000b1c g     F .text	0000001a Voice_Printf
+20000090  w      .highcode	00000000 TMR1_IRQHandler
+20000460 g     F .highcode	0000007e SYS_ResetExecute
+00000e20 g     F .text	00000030 UART1_BaudRateCfg
+
+
+
+Disassembly of section .init:
+
+00000000 <_sinit>:
+_start():
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:17
+
+	.section	.init,"ax",@progbits
+	.global	_start
+	.align	1
+_start:
+	j	handle_reset
+   0:	2110006f          	j	a10 <handle_reset>
+
+Disassembly of section .highcode:
+
+20000000 <_highcode_vma_start>:
+	...
+_vector_base():
+20000008:	0090                	addi	a2,sp,64
+2000000a:	2000                	fld	fs0,0(s0)
+2000000c:	04de                	slli	s1,s1,0x17
+2000000e:	2000                	fld	fs0,0(s0)
+20000010:	bda9                	j	1ffffe6a <_data_lma+0x1fffef02>
+20000012:	f3f9                	bnez	a5,1fffffd8 <_data_lma+0x1ffff070>
+20000014:	0090                	addi	a2,sp,64
+20000016:	2000                	fld	fs0,0(s0)
+	...
+20000020:	0090                	addi	a2,sp,64
+20000022:	2000                	fld	fs0,0(s0)
+20000024:	0090                	addi	a2,sp,64
+20000026:	2000                	fld	fs0,0(s0)
+	...
+20000030:	0090                	addi	a2,sp,64
+20000032:	2000                	fld	fs0,0(s0)
+20000034:	0000                	unimp
+20000036:	0000                	unimp
+20000038:	0090                	addi	a2,sp,64
+2000003a:	2000                	fld	fs0,0(s0)
+2000003c:	0000                	unimp
+2000003e:	0000                	unimp
+20000040:	0090                	addi	a2,sp,64
+20000042:	2000                	fld	fs0,0(s0)
+20000044:	0090                	addi	a2,sp,64
+20000046:	2000                	fld	fs0,0(s0)
+20000048:	0090                	addi	a2,sp,64
+2000004a:	2000                	fld	fs0,0(s0)
+2000004c:	0090                	addi	a2,sp,64
+2000004e:	2000                	fld	fs0,0(s0)
+20000050:	0090                	addi	a2,sp,64
+20000052:	2000                	fld	fs0,0(s0)
+20000054:	0090                	addi	a2,sp,64
+20000056:	2000                	fld	fs0,0(s0)
+20000058:	0090                	addi	a2,sp,64
+2000005a:	2000                	fld	fs0,0(s0)
+2000005c:	0090                	addi	a2,sp,64
+2000005e:	2000                	fld	fs0,0(s0)
+20000060:	0090                	addi	a2,sp,64
+20000062:	2000                	fld	fs0,0(s0)
+20000064:	0090                	addi	a2,sp,64
+20000066:	2000                	fld	fs0,0(s0)
+20000068:	0090                	addi	a2,sp,64
+2000006a:	2000                	fld	fs0,0(s0)
+2000006c:	0090                	addi	a2,sp,64
+2000006e:	2000                	fld	fs0,0(s0)
+20000070:	0090                	addi	a2,sp,64
+20000072:	2000                	fld	fs0,0(s0)
+20000074:	0090                	addi	a2,sp,64
+20000076:	2000                	fld	fs0,0(s0)
+20000078:	0090                	addi	a2,sp,64
+2000007a:	2000                	fld	fs0,0(s0)
+2000007c:	0090                	addi	a2,sp,64
+2000007e:	2000                	fld	fs0,0(s0)
+20000080:	0090                	addi	a2,sp,64
+20000082:	2000                	fld	fs0,0(s0)
+20000084:	0090                	addi	a2,sp,64
+20000086:	2000                	fld	fs0,0(s0)
+20000088:	0090                	addi	a2,sp,64
+2000008a:	2000                	fld	fs0,0(s0)
+2000008c:	0090                	addi	a2,sp,64
+2000008e:	2000                	fld	fs0,0(s0)
+
+20000090 <ADC_IRQHandler>:
+GPIOB_IRQHandler():
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:121
+TMR3_IRQHandler:
+UART2_IRQHandler:
+UART3_IRQHandler:
+WDOG_BAT_IRQHandler: 
+1:  
+	j 1b
+20000090:	a001                	j	20000090 <ADC_IRQHandler>
+
+20000092 <SetSysClock>:
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+ * within the valid period. The safe mode will be automatically 
+ * terminated after the above validity period is exceeded.
+ */
+ __attribute__((always_inline)) static inline void sys_safe_access_enable(void)
+{
+   if(read_csr(0x800)&0x08)
+20000092:	80002773          	csrr	a4,0x800
+20000096:	8b21                	andi	a4,a4,8
+20000098:	00001797          	auipc	a5,0x1
+2000009c:	97c78793          	addi	a5,a5,-1668 # 20000a14 <IRQ_STA>
+200000a0:	cb19                	beqz	a4,200000b6 <SetSysClock+0x24>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+   {
+       IRQ_STA = read_csr(0x800);
+200000a2:	80002773          	csrr	a4,0x800
+200000a6:	00001697          	auipc	a3,0x1
+200000aa:	96e6a723          	sw	a4,-1682(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+200000ae:	4398                	lw	a4,0(a5)
+200000b0:	9b5d                	andi	a4,a4,-9
+200000b2:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   }
+   SAFEOPERATE;
+200000b6:	0001                	nop
+200000b8:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+200000ba:	40001737          	lui	a4,0x40001
+200000be:	05700693          	li	a3,87
+200000c2:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+200000c6:	fa800693          	li	a3,-88
+200000ca:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+200000ce:	0001                	nop
+200000d0:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:30
+__HIGH_CODE
+void SetSysClock(SYS_CLKTypeDef sc)
+{
+    uint32_t i;
+    sys_safe_access_enable();
+    R8_PLL_CONFIG &= ~(1 << 5); //
+200000d2:	04b74683          	lbu	a3,75(a4)
+200000d6:	0df6f693          	andi	a3,a3,223
+200000da:	04d705a3          	sb	a3,75(a4)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+}
+
+__attribute__((always_inline)) static inline void sys_safe_access_disable(void)
+{
+   R8_SAFE_ACCESS_SIG = 0;
+200000de:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+200000e2:	80002673          	csrr	a2,0x800
+200000e6:	4394                	lw	a3,0(a5)
+200000e8:	8aa1                	andi	a3,a3,8
+200000ea:	8ed1                	or	a3,a3,a2
+200000ec:	80069073          	csrw	0x800,a3
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+200000f0:	00001697          	auipc	a3,0x1
+200000f4:	9206a223          	sw	zero,-1756(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+200000f8:	0001                	nop
+200000fa:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:32
+    sys_safe_access_disable();
+    if(sc & 0x20)
+200000fc:	02057693          	andi	a3,a0,32
+20000100:	1a068463          	beqz	a3,200002a8 <SetSysClock+0x216>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:34
+    { // HSE div
+        if(!(R8_HFCK_PWR_CTRL & RB_CLK_XT32M_PON))
+20000104:	00a74703          	lbu	a4,10(a4)
+20000108:	8b11                	andi	a4,a4,4
+2000010a:	eb25                	bnez	a4,2000017a <SetSysClock+0xe8>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+2000010c:	80002773          	csrr	a4,0x800
+20000110:	8b21                	andi	a4,a4,8
+20000112:	cb19                	beqz	a4,20000128 <SetSysClock+0x96>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+20000114:	80002773          	csrr	a4,0x800
+20000118:	00001697          	auipc	a3,0x1
+2000011c:	8ee6ae23          	sw	a4,-1796(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+20000120:	4398                	lw	a4,0(a5)
+20000122:	9b5d                	andi	a4,a4,-9
+20000124:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000128:	0001                	nop
+2000012a:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+2000012c:	40001737          	lui	a4,0x40001
+20000130:	05700693          	li	a3,87
+20000134:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20000138:	fa800693          	li	a3,-88
+2000013c:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+20000140:	0001                	nop
+20000142:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:37
+        {
+            sys_safe_access_enable();
+            R8_HFCK_PWR_CTRL |= RB_CLK_XT32M_PON; // HSE power on
+20000144:	00a74683          	lbu	a3,10(a4)
+20000148:	0046e693          	ori	a3,a3,4
+2000014c:	00d70523          	sb	a3,10(a4)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+20000150:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+20000154:	800026f3          	csrr	a3,0x800
+20000158:	4398                	lw	a4,0(a5)
+2000015a:	8b21                	andi	a4,a4,8
+2000015c:	8f55                	or	a4,a4,a3
+2000015e:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+20000162:	00001717          	auipc	a4,0x1
+20000166:	8a072923          	sw	zero,-1870(a4) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+2000016a:	0001                	nop
+2000016c:	0001                	nop
+2000016e:	4b000713          	li	a4,1200
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:41 (discriminator 3)
+            sys_safe_access_disable();
+            for(i = 0; i < 1200; i++)
+            {
+                __nop();
+20000172:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:42 (discriminator 3)
+                __nop();
+20000174:	0001                	nop
+20000176:	177d                	addi	a4,a4,-1
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:39 (discriminator 3)
+            for(i = 0; i < 1200; i++)
+20000178:	ff6d                	bnez	a4,20000172 <SetSysClock+0xe0>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+2000017a:	80002773          	csrr	a4,0x800
+2000017e:	8b21                	andi	a4,a4,8
+20000180:	cb19                	beqz	a4,20000196 <SetSysClock+0x104>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+20000182:	80002773          	csrr	a4,0x800
+20000186:	00001697          	auipc	a3,0x1
+2000018a:	88e6a723          	sw	a4,-1906(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+2000018e:	4398                	lw	a4,0(a5)
+20000190:	9b5d                	andi	a4,a4,-9
+20000192:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000196:	0001                	nop
+20000198:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+2000019a:	40001737          	lui	a4,0x40001
+2000019e:	05700693          	li	a3,87
+200001a2:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+200001a6:	fa800693          	li	a3,-88
+200001aa:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+200001ae:	0001                	nop
+200001b0:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:47
+            }
+        }
+
+        sys_safe_access_enable();
+        R16_CLK_SYS_CFG = (0 << 6) | (sc & 0x1f);
+200001b2:	897d                	andi	a0,a0,31
+200001b4:	00a71423          	sh	a0,8(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:48
+        __nop();
+200001b8:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:49
+        __nop();
+200001ba:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:50
+        __nop();
+200001bc:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:51
+        __nop();
+200001be:	0001                	nop
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+200001c0:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+200001c4:	800026f3          	csrr	a3,0x800
+200001c8:	4398                	lw	a4,0(a5)
+200001ca:	8b21                	andi	a4,a4,8
+200001cc:	8f55                	or	a4,a4,a3
+200001ce:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+200001d2:	00001717          	auipc	a4,0x1
+200001d6:	84072123          	sw	zero,-1982(a4) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+200001da:	0001                	nop
+200001dc:	0001                	nop
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+200001de:	80002773          	csrr	a4,0x800
+200001e2:	8b21                	andi	a4,a4,8
+200001e4:	cb19                	beqz	a4,200001fa <SetSysClock+0x168>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+200001e6:	80002773          	csrr	a4,0x800
+200001ea:	00001697          	auipc	a3,0x1
+200001ee:	82e6a523          	sw	a4,-2006(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+200001f2:	4398                	lw	a4,0(a5)
+200001f4:	9b5d                	andi	a4,a4,-9
+200001f6:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+200001fa:	0001                	nop
+200001fc:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+200001fe:	40001737          	lui	a4,0x40001
+20000202:	05700693          	li	a3,87
+20000206:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+2000020a:	fa800693          	li	a3,-88
+2000020e:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+20000212:	0001                	nop
+20000214:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:54
+        sys_safe_access_disable();
+        sys_safe_access_enable();
+        SAFEOPERATE;
+20000216:	0001                	nop
+20000218:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:55
+        R8_FLASH_CFG = 0X51;
+2000021a:	400026b7          	lui	a3,0x40002
+2000021e:	05100613          	li	a2,81
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:88
+            sys_safe_access_disable();
+        }
+        else
+        {
+            sys_safe_access_enable();
+            R8_FLASH_CFG = 0X52;
+20000222:	80c683a3          	sb	a2,-2041(a3) # 40001807 <_eusrstack+0x1fff9807>
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+20000226:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+2000022a:	800026f3          	csrr	a3,0x800
+2000022e:	4398                	lw	a4,0(a5)
+20000230:	8b21                	andi	a4,a4,8
+20000232:	8f55                	or	a4,a4,a3
+20000234:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+20000238:	00000717          	auipc	a4,0x0
+2000023c:	7c072e23          	sw	zero,2012(a4) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+20000240:	0001                	nop
+20000242:	0001                	nop
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+20000244:	80002773          	csrr	a4,0x800
+20000248:	8b21                	andi	a4,a4,8
+2000024a:	cb19                	beqz	a4,20000260 <SetSysClock+0x1ce>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+2000024c:	80002773          	csrr	a4,0x800
+20000250:	00000697          	auipc	a3,0x0
+20000254:	7ce6a223          	sw	a4,1988(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+20000258:	4398                	lw	a4,0(a5)
+2000025a:	9b5d                	andi	a4,a4,-9
+2000025c:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000260:	0001                	nop
+20000262:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20000264:	40001737          	lui	a4,0x40001
+20000268:	05700693          	li	a3,87
+2000026c:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20000270:	fa800693          	li	a3,-88
+20000274:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+20000278:	0001                	nop
+2000027a:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:100
+        R16_CLK_SYS_CFG |= RB_CLK_SYS_MOD;
+        sys_safe_access_disable();
+    }
+    //更改FLASH clk的驱动能力
+    sys_safe_access_enable();
+    R8_PLL_CONFIG |= 1 << 7;
+2000027c:	04b74683          	lbu	a3,75(a4)
+20000280:	0806e693          	ori	a3,a3,128
+20000284:	04d705a3          	sb	a3,75(a4)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+20000288:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+2000028c:	80002773          	csrr	a4,0x800
+20000290:	439c                	lw	a5,0(a5)
+20000292:	8ba1                	andi	a5,a5,8
+20000294:	8fd9                	or	a5,a5,a4
+20000296:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+2000029a:	00000797          	auipc	a5,0x0
+2000029e:	7607ad23          	sw	zero,1914(a5) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+200002a2:	0001                	nop
+200002a4:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:102
+    sys_safe_access_disable();
+}
+200002a6:	8082                	ret
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:59
+    else if(sc & 0x40)
+200002a8:	04057693          	andi	a3,a0,64
+200002ac:	16068763          	beqz	a3,2000041a <SetSysClock+0x388>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:61
+        if(!(R8_HFCK_PWR_CTRL & RB_CLK_PLL_PON))
+200002b0:	00a74703          	lbu	a4,10(a4)
+200002b4:	8b41                	andi	a4,a4,16
+200002b6:	eb25                	bnez	a4,20000326 <SetSysClock+0x294>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+200002b8:	80002773          	csrr	a4,0x800
+200002bc:	8b21                	andi	a4,a4,8
+200002be:	cb19                	beqz	a4,200002d4 <SetSysClock+0x242>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+200002c0:	80002773          	csrr	a4,0x800
+200002c4:	00000697          	auipc	a3,0x0
+200002c8:	74e6a823          	sw	a4,1872(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+200002cc:	4398                	lw	a4,0(a5)
+200002ce:	9b5d                	andi	a4,a4,-9
+200002d0:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+200002d4:	0001                	nop
+200002d6:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+200002d8:	40001737          	lui	a4,0x40001
+200002dc:	05700693          	li	a3,87
+200002e0:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+200002e4:	fa800693          	li	a3,-88
+200002e8:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+200002ec:	0001                	nop
+200002ee:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:64
+            R8_HFCK_PWR_CTRL |= RB_CLK_PLL_PON; // PLL power on
+200002f0:	00a74683          	lbu	a3,10(a4)
+200002f4:	0106e693          	ori	a3,a3,16
+200002f8:	00d70523          	sb	a3,10(a4)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+200002fc:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+20000300:	800026f3          	csrr	a3,0x800
+20000304:	4398                	lw	a4,0(a5)
+20000306:	8b21                	andi	a4,a4,8
+20000308:	8f55                	or	a4,a4,a3
+2000030a:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+2000030e:	00000717          	auipc	a4,0x0
+20000312:	70072323          	sw	zero,1798(a4) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+20000316:	0001                	nop
+20000318:	0001                	nop
+2000031a:	7d000713          	li	a4,2000
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:68 (discriminator 3)
+                __nop();
+2000031e:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:69 (discriminator 3)
+                __nop();
+20000320:	0001                	nop
+20000322:	177d                	addi	a4,a4,-1
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:66 (discriminator 3)
+            for(i = 0; i < 2000; i++)
+20000324:	ff6d                	bnez	a4,2000031e <SetSysClock+0x28c>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+20000326:	80002773          	csrr	a4,0x800
+2000032a:	8b21                	andi	a4,a4,8
+2000032c:	cb19                	beqz	a4,20000342 <SetSysClock+0x2b0>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+2000032e:	80002773          	csrr	a4,0x800
+20000332:	00000697          	auipc	a3,0x0
+20000336:	6ee6a123          	sw	a4,1762(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+2000033a:	4398                	lw	a4,0(a5)
+2000033c:	9b5d                	andi	a4,a4,-9
+2000033e:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000342:	0001                	nop
+20000344:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20000346:	40001737          	lui	a4,0x40001
+2000034a:	05700693          	li	a3,87
+2000034e:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20000352:	fa800693          	li	a3,-88
+20000356:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+2000035a:	0001                	nop
+2000035c:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:73
+        R16_CLK_SYS_CFG = (1 << 6) | (sc & 0x1f);
+2000035e:	01f57693          	andi	a3,a0,31
+20000362:	0406e693          	ori	a3,a3,64
+20000366:	00d71423          	sh	a3,8(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:74
+        __nop();
+2000036a:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:75
+        __nop();
+2000036c:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:76
+        __nop();
+2000036e:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:77
+        __nop();
+20000370:	0001                	nop
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+20000372:	04070023          	sb	zero,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+20000376:	800026f3          	csrr	a3,0x800
+2000037a:	4398                	lw	a4,0(a5)
+2000037c:	8b21                	andi	a4,a4,8
+2000037e:	8f55                	or	a4,a4,a3
+20000380:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+20000384:	00000717          	auipc	a4,0x0
+20000388:	68072823          	sw	zero,1680(a4) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+2000038c:	0001                	nop
+2000038e:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:79
+        if(sc == CLK_SOURCE_PLL_80MHz)
+20000390:	04600713          	li	a4,70
+20000394:	04e51263          	bne	a0,a4,200003d8 <SetSysClock+0x346>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+20000398:	80002773          	csrr	a4,0x800
+2000039c:	8b21                	andi	a4,a4,8
+2000039e:	cb19                	beqz	a4,200003b4 <SetSysClock+0x322>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+200003a0:	80002773          	csrr	a4,0x800
+200003a4:	00000697          	auipc	a3,0x0
+200003a8:	66e6a823          	sw	a4,1648(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+200003ac:	4398                	lw	a4,0(a5)
+200003ae:	9b5d                	andi	a4,a4,-9
+200003b0:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+200003b4:	0001                	nop
+200003b6:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+200003b8:	40001737          	lui	a4,0x40001
+200003bc:	05700693          	li	a3,87
+200003c0:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+200003c4:	fa800693          	li	a3,-88
+200003c8:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+200003cc:	0001                	nop
+200003ce:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:82
+            R8_FLASH_CFG = 0X02;
+200003d0:	400026b7          	lui	a3,0x40002
+200003d4:	4609                	li	a2,2
+200003d6:	b5b1                	j	20000222 <SetSysClock+0x190>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+200003d8:	80002773          	csrr	a4,0x800
+200003dc:	8b21                	andi	a4,a4,8
+200003de:	cb19                	beqz	a4,200003f4 <SetSysClock+0x362>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+200003e0:	80002773          	csrr	a4,0x800
+200003e4:	00000697          	auipc	a3,0x0
+200003e8:	62e6a823          	sw	a4,1584(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+200003ec:	4398                	lw	a4,0(a5)
+200003ee:	9b5d                	andi	a4,a4,-9
+200003f0:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+200003f4:	0001                	nop
+200003f6:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+200003f8:	40001737          	lui	a4,0x40001
+200003fc:	05700693          	li	a3,87
+20000400:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20000404:	fa800693          	li	a3,-88
+20000408:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+2000040c:	0001                	nop
+2000040e:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:88
+            R8_FLASH_CFG = 0X52;
+20000410:	400026b7          	lui	a3,0x40002
+20000414:	05200613          	li	a2,82
+20000418:	b529                	j	20000222 <SetSysClock+0x190>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+2000041a:	80002773          	csrr	a4,0x800
+2000041e:	8b21                	andi	a4,a4,8
+20000420:	cb19                	beqz	a4,20000436 <SetSysClock+0x3a4>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+20000422:	80002773          	csrr	a4,0x800
+20000426:	00000697          	auipc	a3,0x0
+2000042a:	5ee6a723          	sw	a4,1518(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+2000042e:	4398                	lw	a4,0(a5)
+20000430:	9b5d                	andi	a4,a4,-9
+20000432:	80071073          	csrw	0x800,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000436:	0001                	nop
+20000438:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+2000043a:	40001737          	lui	a4,0x40001
+2000043e:	05700693          	li	a3,87
+20000442:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20000446:	fa800693          	li	a3,-88
+2000044a:	04d70023          	sb	a3,64(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+2000044e:	0001                	nop
+20000450:	0001                	nop
+SetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:95
+        R16_CLK_SYS_CFG |= RB_CLK_SYS_MOD;
+20000452:	00875683          	lhu	a3,8(a4)
+20000456:	0c06e693          	ori	a3,a3,192
+2000045a:	00d71423          	sh	a3,8(a4)
+2000045e:	b3e1                	j	20000226 <SetSysClock+0x194>
+
+20000460 <SYS_ResetExecute>:
+SYS_ResetExecute():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:164
+ *
+ * @return  none
+ */
+__HIGH_CODE
+void SYS_ResetExecute(void)
+{
+20000460:	1141                	addi	sp,sp,-16
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:165
+    FLASH_ROM_SW_RESET();
+20000462:	4681                	li	a3,0
+20000464:	4601                	li	a2,0
+20000466:	4581                	li	a1,0
+20000468:	4511                	li	a0,4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:164
+{
+2000046a:	c606                	sw	ra,12(sp)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:165
+    FLASH_ROM_SW_RESET();
+2000046c:	2c1d                	jal	200006a2 <FLASH_EEPROM_CMD>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+2000046e:	800027f3          	csrr	a5,0x800
+20000472:	8ba1                	andi	a5,a5,8
+20000474:	00000697          	auipc	a3,0x0
+20000478:	5a068693          	addi	a3,a3,1440 # 20000a14 <IRQ_STA>
+2000047c:	cb99                	beqz	a5,20000492 <SYS_ResetExecute+0x32>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+2000047e:	800027f3          	csrr	a5,0x800
+20000482:	00000717          	auipc	a4,0x0
+20000486:	58f72923          	sw	a5,1426(a4) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+2000048a:	429c                	lw	a5,0(a3)
+2000048c:	9bdd                	andi	a5,a5,-9
+2000048e:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000492:	0001                	nop
+20000494:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20000496:	400017b7          	lui	a5,0x40001
+2000049a:	05700713          	li	a4,87
+2000049e:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+200004a2:	fa800713          	li	a4,-88
+200004a6:	04e78023          	sb	a4,64(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+200004aa:	0001                	nop
+200004ac:	0001                	nop
+SYS_ResetExecute():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:167
+    sys_safe_access_enable();
+    R8_RST_WDOG_CTRL |= RB_SOFTWARE_RESET;
+200004ae:	0467c703          	lbu	a4,70(a5)
+200004b2:	00176713          	ori	a4,a4,1
+200004b6:	04e78323          	sb	a4,70(a5)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+200004ba:	04078023          	sb	zero,64(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+200004be:	80002773          	csrr	a4,0x800
+200004c2:	429c                	lw	a5,0(a3)
+200004c4:	8ba1                	andi	a5,a5,8
+200004c6:	8fd9                	or	a5,a5,a4
+200004c8:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+200004cc:	00000797          	auipc	a5,0x0
+200004d0:	5407a423          	sw	zero,1352(a5) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+200004d4:	0001                	nop
+200004d6:	0001                	nop
+SYS_ResetExecute():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:169
+    sys_safe_access_disable();
+}
+200004d8:	40b2                	lw	ra,12(sp)
+200004da:	0141                	addi	sp,sp,16
+200004dc:	8082                	ret
+
+200004de <HardFault_Handler>:
+HardFault_Handler():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:303
+__INTERRUPT
+__HIGH_CODE
+__attribute__((weak))
+void HardFault_Handler(void)
+{
+    FLASH_ROM_SW_RESET();
+200004de:	4681                	li	a3,0
+200004e0:	4601                	li	a2,0
+200004e2:	4581                	li	a1,0
+200004e4:	4511                	li	a0,4
+200004e6:	2a75                	jal	200006a2 <FLASH_EEPROM_CMD>
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+200004e8:	800027f3          	csrr	a5,0x800
+200004ec:	8ba1                	andi	a5,a5,8
+200004ee:	00000717          	auipc	a4,0x0
+200004f2:	52670713          	addi	a4,a4,1318 # 20000a14 <IRQ_STA>
+200004f6:	cb99                	beqz	a5,2000050c <HardFault_Handler+0x2e>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+200004f8:	800027f3          	csrr	a5,0x800
+200004fc:	00000697          	auipc	a3,0x0
+20000500:	50f6ac23          	sw	a5,1304(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+20000504:	431c                	lw	a5,0(a4)
+20000506:	9bdd                	andi	a5,a5,-9
+20000508:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+2000050c:	0001                	nop
+2000050e:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20000510:	400017b7          	lui	a5,0x40001
+20000514:	05700693          	li	a3,87
+20000518:	04d78023          	sb	a3,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+2000051c:	fa800693          	li	a3,-88
+20000520:	04d78023          	sb	a3,64(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+20000524:	0001                	nop
+20000526:	0001                	nop
+HardFault_Handler():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:305
+    sys_safe_access_enable();
+    R16_INT32K_TUNE = 0xFFFF;
+20000528:	56fd                	li	a3,-1
+2000052a:	02d79623          	sh	a3,44(a5)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+2000052e:	04078023          	sb	zero,64(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+20000532:	800026f3          	csrr	a3,0x800
+20000536:	431c                	lw	a5,0(a4)
+20000538:	8ba1                	andi	a5,a5,8
+2000053a:	8fd5                	or	a5,a5,a3
+2000053c:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+20000540:	00000797          	auipc	a5,0x0
+20000544:	4c07aa23          	sw	zero,1236(a5) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+20000548:	0001                	nop
+2000054a:	0001                	nop
+sys_safe_access_enable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:182
+   if(read_csr(0x800)&0x08)
+2000054c:	800027f3          	csrr	a5,0x800
+20000550:	8ba1                	andi	a5,a5,8
+20000552:	cb99                	beqz	a5,20000568 <HardFault_Handler+0x8a>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:184
+       IRQ_STA = read_csr(0x800);
+20000554:	800027f3          	csrr	a5,0x800
+20000558:	00000697          	auipc	a3,0x0
+2000055c:	4af6ae23          	sw	a5,1212(a3) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:185
+       write_csr(0x800, (IRQ_STA&(~0x08)));
+20000560:	431c                	lw	a5,0(a4)
+20000562:	9bdd                	andi	a5,a5,-9
+20000564:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:187
+   SAFEOPERATE;
+20000568:	0001                	nop
+2000056a:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:188
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+2000056c:	400017b7          	lui	a5,0x40001
+20000570:	05700693          	li	a3,87
+20000574:	04d78023          	sb	a3,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:189
+   R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20000578:	fa800693          	li	a3,-88
+2000057c:	04d78023          	sb	a3,64(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:190
+   SAFEOPERATE;
+20000580:	0001                	nop
+20000582:	0001                	nop
+HardFault_Handler():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:308
+	sys_safe_access_disable();
+    sys_safe_access_enable();
+    R8_RST_WDOG_CTRL |= RB_SOFTWARE_RESET;
+20000584:	0467c683          	lbu	a3,70(a5)
+20000588:	0016e693          	ori	a3,a3,1
+2000058c:	04d78323          	sb	a3,70(a5)
+sys_safe_access_disable():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:195
+   R8_SAFE_ACCESS_SIG = 0;
+20000590:	04078023          	sb	zero,64(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:196
+   write_csr(0x800, read_csr(0x800)|(IRQ_STA&0x08));
+20000594:	800026f3          	csrr	a3,0x800
+20000598:	431c                	lw	a5,0(a4)
+2000059a:	8ba1                	andi	a5,a5,8
+2000059c:	8fd5                	or	a5,a5,a3
+2000059e:	80079073          	csrw	0x800,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:197
+   IRQ_STA = 0;
+200005a2:	00000797          	auipc	a5,0x0
+200005a6:	4607a923          	sw	zero,1138(a5) # 20000a14 <IRQ_STA>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/inc/CH58x_sys.h:198
+   SAFEOPERATE;
+200005aa:	0001                	nop
+200005ac:	0001                	nop
+HardFault_Handler():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:310 (discriminator 1)
+    sys_safe_access_disable();
+    while(1);
+200005ae:	a001                	j	200005ae <HardFault_Handler+0xd0>
+
+200005b0 <mDelayuS>:
+mDelayuS():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:329
+{
+    uint32_t i;
+#if(FREQ_SYS == 80000000)
+    i = t * 20;
+#elif(FREQ_SYS == 60000000)
+    i = t * 15;
+200005b0:	47bd                	li	a5,15
+200005b2:	02f50533          	mul	a0,a0,a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:353 (discriminator 1)
+#else
+    i = t << 1;
+#endif
+    do
+    {
+        __nop();
+200005b6:	0001                	nop
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:354 (discriminator 1)
+    } while(--i);
+200005b8:	157d                	addi	a0,a0,-1
+200005ba:	fd75                	bnez	a0,200005b6 <mDelayuS+0x6>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:355
+}
+200005bc:	8082                	ret
+
+200005be <mDelaymS>:
+mDelaymS():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:368
+ *
+ * @return  none
+ */
+__HIGH_CODE
+void mDelaymS(uint16_t t)
+{
+200005be:	1141                	addi	sp,sp,-16
+200005c0:	c422                	sw	s0,8(sp)
+200005c2:	c226                	sw	s1,4(sp)
+200005c4:	c606                	sw	ra,12(sp)
+200005c6:	84aa                	mv	s1,a0
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:371
+    uint16_t i;
+
+    for(i = 0; i < t; i++)
+200005c8:	4401                	li	s0,0
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:371 (discriminator 1)
+200005ca:	00941763          	bne	s0,s1,200005d8 <mDelaymS+0x1a>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:375
+    {
+        mDelayuS(1000);
+    }
+}
+200005ce:	40b2                	lw	ra,12(sp)
+200005d0:	4422                	lw	s0,8(sp)
+200005d2:	4492                	lw	s1,4(sp)
+200005d4:	0141                	addi	sp,sp,16
+200005d6:	8082                	ret
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:371 (discriminator 3)
+    for(i = 0; i < t; i++)
+200005d8:	0405                	addi	s0,s0,1
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:373 (discriminator 3)
+        mDelayuS(1000);
+200005da:	3e800513          	li	a0,1000
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:371 (discriminator 3)
+    for(i = 0; i < t; i++)
+200005de:	0442                	slli	s0,s0,0x10
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:373 (discriminator 3)
+        mDelayuS(1000);
+200005e0:	3fc1                	jal	200005b0 <mDelayuS>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:371 (discriminator 3)
+    for(i = 0; i < t; i++)
+200005e2:	8041                	srli	s0,s0,0x10
+200005e4:	b7dd                	j	200005ca <mDelaymS+0xc>
+
+200005e6 <FLASH_ROM_BEG>:
+FLASH_ROM_BEG():
+200005e6:	80040323          	sb	zero,-2042(s0)
+200005ea:	4715                	li	a4,5
+200005ec:	80e40323          	sb	a4,-2042(s0)
+200005f0:	0001                	nop
+200005f2:	80a40223          	sb	a0,-2044(s0)
+200005f6:	8082                	ret
+
+200005f8 <FLASH_ROM_END>:
+FLASH_ROM_END():
+200005f8:	80640783          	lb	a5,-2042(s0)
+200005fc:	fe07cee3          	bltz	a5,200005f8 <FLASH_ROM_END>
+20000600:	80040323          	sb	zero,-2042(s0)
+20000604:	8082                	ret
+
+20000606 <FLASH_ROM_IN>:
+FLASH_ROM_IN():
+20000606:	80640783          	lb	a5,-2042(s0)
+2000060a:	fe07cee3          	bltz	a5,20000606 <FLASH_ROM_IN>
+2000060e:	80444503          	lbu	a0,-2044(s0)
+20000612:	8082                	ret
+
+20000614 <FLASH_ROM_OUT>:
+FLASH_ROM_OUT():
+20000614:	80640783          	lb	a5,-2042(s0)
+20000618:	fe07cee3          	bltz	a5,20000614 <FLASH_ROM_OUT>
+2000061c:	80a40223          	sb	a0,-2044(s0)
+20000620:	8082                	ret
+
+20000622 <FLASH_ROM_ADDR>:
+FLASH_ROM_ADDR():
+20000622:	1141                	addi	sp,sp,-16
+20000624:	c426                	sw	s1,8(sp)
+20000626:	c24a                	sw	s2,4(sp)
+20000628:	c04e                	sw	s3,0(sp)
+2000062a:	c606                	sw	ra,12(sp)
+2000062c:	0bf57713          	andi	a4,a0,191
+20000630:	47ad                	li	a5,11
+20000632:	89aa                	mv	s3,a0
+20000634:	892e                	mv	s2,a1
+20000636:	4495                	li	s1,5
+20000638:	00f70663          	beq	a4,a5,20000644 <FLASH_ROM_ADDR+0x22>
+2000063c:	4519                	li	a0,6
+2000063e:	3765                	jal	200005e6 <FLASH_ROM_BEG>
+20000640:	3f65                	jal	200005f8 <FLASH_ROM_END>
+20000642:	448d                	li	s1,3
+20000644:	854e                	mv	a0,s3
+20000646:	3745                	jal	200005e6 <FLASH_ROM_BEG>
+20000648:	59fd                	li	s3,-1
+2000064a:	14fd                	addi	s1,s1,-1
+2000064c:	01349863          	bne	s1,s3,2000065c <FLASH_ROM_ADDR+0x3a>
+20000650:	40b2                	lw	ra,12(sp)
+20000652:	44a2                	lw	s1,8(sp)
+20000654:	4912                	lw	s2,4(sp)
+20000656:	4982                	lw	s3,0(sp)
+20000658:	0141                	addi	sp,sp,16
+2000065a:	8082                	ret
+2000065c:	01095513          	srli	a0,s2,0x10
+20000660:	0ff57513          	andi	a0,a0,255
+20000664:	3f45                	jal	20000614 <FLASH_ROM_OUT>
+20000666:	0922                	slli	s2,s2,0x8
+20000668:	b7cd                	j	2000064a <FLASH_ROM_ADDR+0x28>
+
+2000066a <FLASH_ROM_WAIT>:
+FLASH_ROM_WAIT():
+2000066a:	1101                	addi	sp,sp,-32
+2000066c:	cc26                	sw	s1,24(sp)
+2000066e:	ce06                	sw	ra,28(sp)
+20000670:	000804b7          	lui	s1,0x80
+20000674:	3751                	jal	200005f8 <FLASH_ROM_END>
+20000676:	4515                	li	a0,5
+20000678:	37bd                	jal	200005e6 <FLASH_ROM_BEG>
+2000067a:	3771                	jal	20000606 <FLASH_ROM_IN>
+2000067c:	3769                	jal	20000606 <FLASH_ROM_IN>
+2000067e:	c62a                	sw	a0,12(sp)
+20000680:	3fa5                	jal	200005f8 <FLASH_ROM_END>
+20000682:	4532                	lw	a0,12(sp)
+20000684:	00157793          	andi	a5,a0,1
+20000688:	eb89                	bnez	a5,2000069a <FLASH_ROM_WAIT+0x30>
+2000068a:	00156513          	ori	a0,a0,1
+2000068e:	0ff57513          	andi	a0,a0,255
+20000692:	40f2                	lw	ra,28(sp)
+20000694:	44e2                	lw	s1,24(sp)
+20000696:	6105                	addi	sp,sp,32
+20000698:	8082                	ret
+2000069a:	14fd                	addi	s1,s1,-1
+2000069c:	fce9                	bnez	s1,20000676 <FLASH_ROM_WAIT+0xc>
+2000069e:	4501                	li	a0,0
+200006a0:	bfcd                	j	20000692 <FLASH_ROM_WAIT+0x28>
+
+200006a2 <FLASH_EEPROM_CMD>:
+FLASH_EEPROM_CMD():
+200006a2:	7139                	addi	sp,sp,-64
+200006a4:	dc26                	sw	s1,56(sp)
+200006a6:	da4a                	sw	s2,52(sp)
+200006a8:	d84e                	sw	s3,48(sp)
+200006aa:	d652                	sw	s4,44(sp)
+200006ac:	d456                	sw	s5,40(sp)
+200006ae:	d25a                	sw	s6,36(sp)
+200006b0:	d05e                	sw	s7,32(sp)
+200006b2:	de06                	sw	ra,60(sp)
+200006b4:	ce62                	sw	s8,28(sp)
+200006b6:	cc66                	sw	s9,24(sp)
+200006b8:	e000e7b7          	lui	a5,0xe000e
+200006bc:	577d                	li	a4,-1
+200006be:	0007aa83          	lw	s5,0(a5) # e000e000 <_eusrstack+0xc0006000>
+200006c2:	c622                	sw	s0,12(sp)
+200006c4:	0047aa03          	lw	s4,4(a5)
+200006c8:	18e7a023          	sw	a4,384(a5)
+200006cc:	18e7a223          	sw	a4,388(a5)
+200006d0:	400017b7          	lui	a5,0x40001
+200006d4:	05700713          	li	a4,87
+200006d8:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+200006dc:	fa800713          	li	a4,-88
+200006e0:	04e78023          	sb	a4,64(a5)
+200006e4:	0447c783          	lbu	a5,68(a5)
+200006e8:	ff750b93          	addi	s7,a0,-9
+200006ec:	84b6                	mv	s1,a3
+200006ee:	07e2                	slli	a5,a5,0x18
+200006f0:	0ffbfb93          	andi	s7,s7,255
+200006f4:	4685                	li	a3,1
+200006f6:	89aa                	mv	s3,a0
+200006f8:	8b2e                	mv	s6,a1
+200006fa:	8932                	mv	s2,a2
+200006fc:	40002437          	lui	s0,0x40002
+20000700:	87e1                	srai	a5,a5,0x18
+20000702:	5701                	li	a4,-32
+20000704:	0176fa63          	bgeu	a3,s7,20000718 <FLASH_EEPROM_CMD+0x76>
+20000708:	00d50863          	beq	a0,a3,20000718 <FLASH_EEPROM_CMD+0x76>
+2000070c:	4689                	li	a3,2
+2000070e:	02000713          	li	a4,32
+20000712:	00d51363          	bne	a0,a3,20000718 <FLASH_EEPROM_CMD+0x76>
+20000716:	5701                	li	a4,-32
+20000718:	8fd9                	or	a5,a5,a4
+2000071a:	0ff7f793          	andi	a5,a5,255
+2000071e:	40001cb7          	lui	s9,0x40001
+20000722:	04fc8223          	sb	a5,68(s9) # 40001044 <_eusrstack+0x1fff9044>
+20000726:	4711                	li	a4,4
+20000728:	80e40323          	sb	a4,-2042(s0) # 40001806 <_eusrstack+0x1fff9806>
+2000072c:	0ff00513          	li	a0,255
+20000730:	3d5d                	jal	200005e6 <FLASH_ROM_BEG>
+20000732:	4c09                	li	s8,2
+20000734:	35d1                	jal	200005f8 <FLASH_ROM_END>
+20000736:	117c6d63          	bltu	s8,s7,20000850 <FLASH_EEPROM_CMD+0x1ae>
+2000073a:	000705b7          	lui	a1,0x70
+2000073e:	95da                	add	a1,a1,s6
+20000740:	00078737          	lui	a4,0x78
+20000744:	5579                	li	a0,-2
+20000746:	04e5f263          	bgeu	a1,a4,2000078a <FLASH_EEPROM_CMD+0xe8>
+2000074a:	009587b3          	add	a5,a1,s1
+2000074e:	02f76e63          	bltu	a4,a5,2000078a <FLASH_EEPROM_CMD+0xe8>
+20000752:	00080b37          	lui	s6,0x80
+20000756:	47a9                	li	a5,10
+20000758:	0165eb33          	or	s6,a1,s6
+2000075c:	06f99963          	bne	s3,a5,200007ce <FLASH_EEPROM_CMD+0x12c>
+20000760:	e489                	bnez	s1,2000076a <FLASH_EEPROM_CMD+0xc8>
+20000762:	4481                	li	s1,0
+20000764:	3d51                	jal	200005f8 <FLASH_ROM_END>
+20000766:	8526                	mv	a0,s1
+20000768:	a00d                	j	2000078a <FLASH_EEPROM_CMD+0xe8>
+2000076a:	85da                	mv	a1,s6
+2000076c:	4509                	li	a0,2
+2000076e:	3d55                	jal	20000622 <FLASH_ROM_ADDR>
+20000770:	0905                	addi	s2,s2,1
+20000772:	fff94503          	lbu	a0,-1(s2)
+20000776:	14fd                	addi	s1,s1,-1
+20000778:	0b05                	addi	s6,s6,1
+2000077a:	3d69                	jal	20000614 <FLASH_ROM_OUT>
+2000077c:	c481                	beqz	s1,20000784 <FLASH_EEPROM_CMD+0xe2>
+2000077e:	0ffb7793          	andi	a5,s6,255
+20000782:	f7fd                	bnez	a5,20000770 <FLASH_EEPROM_CMD+0xce>
+20000784:	35dd                	jal	2000066a <FLASH_ROM_WAIT>
+20000786:	fd69                	bnez	a0,20000760 <FLASH_EEPROM_CMD+0xbe>
+20000788:	557d                	li	a0,-1
+2000078a:	400017b7          	lui	a5,0x40001
+2000078e:	05700713          	li	a4,87
+20000792:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+20000796:	fa800713          	li	a4,-88
+2000079a:	04e78023          	sb	a4,64(a5)
+2000079e:	0447c703          	lbu	a4,68(a5)
+200007a2:	8b41                	andi	a4,a4,16
+200007a4:	04e78223          	sb	a4,68(a5)
+200007a8:	50f2                	lw	ra,60(sp)
+200007aa:	e000e7b7          	lui	a5,0xe000e
+200007ae:	1157a023          	sw	s5,256(a5) # e000e100 <_eusrstack+0xc0006100>
+200007b2:	1147a223          	sw	s4,260(a5)
+200007b6:	54e2                	lw	s1,56(sp)
+200007b8:	4432                	lw	s0,12(sp)
+200007ba:	5952                	lw	s2,52(sp)
+200007bc:	59c2                	lw	s3,48(sp)
+200007be:	5a32                	lw	s4,44(sp)
+200007c0:	5aa2                	lw	s5,40(sp)
+200007c2:	5b12                	lw	s6,36(sp)
+200007c4:	5b82                	lw	s7,32(sp)
+200007c6:	4c72                	lw	s8,28(sp)
+200007c8:	4ce2                	lw	s9,24(sp)
+200007ca:	6121                	addi	sp,sp,64
+200007cc:	8082                	ret
+200007ce:	47a5                	li	a5,9
+200007d0:	06f99563          	bne	s3,a5,2000083a <FLASH_EEPROM_CMD+0x198>
+200007d4:	6985                	lui	s3,0x1
+200007d6:	0ff00913          	li	s2,255
+200007da:	009906b3          	add	a3,s2,s1
+200007de:	012b74b3          	and	s1,s6,s2
+200007e2:	94b6                	add	s1,s1,a3
+200007e4:	fff94913          	not	s2,s2
+200007e8:	009974b3          	and	s1,s2,s1
+200007ec:	6b85                	lui	s7,0x1
+200007ee:	01697933          	and	s2,s2,s6
+200007f2:	6b41                	lui	s6,0x10
+200007f4:	fff98793          	addi	a5,s3,-1 # fff <_data_lma+0x97>
+200007f8:	0127f7b3          	and	a5,a5,s2
+200007fc:	e399                	bnez	a5,20000802 <FLASH_EEPROM_CMD+0x160>
+200007fe:	0134fc63          	bgeu	s1,s3,20000816 <FLASH_EEPROM_CMD+0x174>
+20000802:	0049d993          	srli	s3,s3,0x4
+20000806:	47c1                	li	a5,16
+20000808:	ff37e6e3          	bltu	a5,s3,200007f4 <FLASH_EEPROM_CMD+0x152>
+2000080c:	bf99                	j	20000762 <FLASH_EEPROM_CMD+0xc0>
+2000080e:	6905                	lui	s2,0x1
+20000810:	69c1                	lui	s3,0x10
+20000812:	197d                	addi	s2,s2,-1
+20000814:	b7d9                	j	200007da <FLASH_EEPROM_CMD+0x138>
+20000816:	0d800513          	li	a0,216
+2000081a:	01698863          	beq	s3,s6,2000082a <FLASH_EEPROM_CMD+0x188>
+2000081e:	02000513          	li	a0,32
+20000822:	01798463          	beq	s3,s7,2000082a <FLASH_EEPROM_CMD+0x188>
+20000826:	08100513          	li	a0,129
+2000082a:	85ca                	mv	a1,s2
+2000082c:	3bdd                	jal	20000622 <FLASH_ROM_ADDR>
+2000082e:	3d35                	jal	2000066a <FLASH_ROM_WAIT>
+20000830:	dd21                	beqz	a0,20000788 <FLASH_EEPROM_CMD+0xe6>
+20000832:	994e                	add	s2,s2,s3
+20000834:	413484b3          	sub	s1,s1,s3
+20000838:	b7d9                	j	200007fe <FLASH_EEPROM_CMD+0x15c>
+2000083a:	85da                	mv	a1,s6
+2000083c:	452d                	li	a0,11
+2000083e:	33d5                	jal	20000622 <FLASH_ROM_ADDR>
+20000840:	94ca                	add	s1,s1,s2
+20000842:	f29900e3          	beq	s2,s1,20000762 <FLASH_EEPROM_CMD+0xc0>
+20000846:	0905                	addi	s2,s2,1
+20000848:	3b7d                	jal	20000606 <FLASH_ROM_IN>
+2000084a:	fea90fa3          	sb	a0,-1(s2) # fff <_data_lma+0x97>
+2000084e:	bfd5                	j	20000842 <FLASH_EEPROM_CMD+0x1a0>
+20000850:	fff98793          	addi	a5,s3,-1 # ffff <_data_lma+0xf097>
+20000854:	0ff7f793          	andi	a5,a5,255
+20000858:	0cfc6163          	bltu	s8,a5,2000091a <.loop402+0x7a>
+2000085c:	041cc783          	lbu	a5,65(s9)
+20000860:	08300713          	li	a4,131
+20000864:	04f71f63          	bne	a4,a5,200008c2 <.loop402+0x22>
+20000868:	00080737          	lui	a4,0x80
+2000086c:	04eb6b63          	bltu	s6,a4,200008c2 <.loop402+0x22>
+20000870:	009b07b3          	add	a5,s6,s1
+20000874:	001006b7          	lui	a3,0x100
+20000878:	04d7f563          	bgeu	a5,a3,200008c2 <.loop402+0x22>
+2000087c:	00eb4b33          	xor	s6,s6,a4
+20000880:	4789                	li	a5,2
+20000882:	06f99363          	bne	s3,a5,200008e8 <.loop402+0x48>
+20000886:	8089                	srli	s1,s1,0x2
+20000888:	49d5                	li	s3,21
+2000088a:	ec048ce3          	beqz	s1,20000762 <FLASH_EEPROM_CMD+0xc0>
+2000088e:	85da                	mv	a1,s6
+20000890:	4509                	li	a0,2
+20000892:	3b41                	jal	20000622 <FLASH_ROM_ADDR>
+20000894:	0911                	addi	s2,s2,4
+20000896:	ffc92703          	lw	a4,-4(s2)
+2000089a:	4791                	li	a5,4
+2000089c:	80e42023          	sw	a4,-2048(s0)
+
+200008a0 <.loop402>:
+200008a0:	80640703          	lb	a4,-2042(s0)
+200008a4:	fe074ee3          	bltz	a4,200008a0 <.loop402>
+200008a8:	81340323          	sb	s3,-2042(s0)
+200008ac:	17fd                	addi	a5,a5,-1
+200008ae:	fbed                	bnez	a5,200008a0 <.loop402>
+200008b0:	14fd                	addi	s1,s1,-1
+200008b2:	0b11                	addi	s6,s6,4
+200008b4:	c481                	beqz	s1,200008bc <.loop402+0x1c>
+200008b6:	0ffb7793          	andi	a5,s6,255
+200008ba:	ffe9                	bnez	a5,20000894 <FLASH_EEPROM_CMD+0x1f2>
+200008bc:	337d                	jal	2000066a <FLASH_ROM_WAIT>
+200008be:	f571                	bnez	a0,2000088a <FLASH_EEPROM_CMD+0x1e8>
+200008c0:	b5e1                	j	20000788 <FLASH_EEPROM_CMD+0xe6>
+200008c2:	400017b7          	lui	a5,0x40001
+200008c6:	0457c703          	lbu	a4,69(a5) # 40001045 <_eusrstack+0x1fff9045>
+200008ca:	000807b7          	lui	a5,0x80
+200008ce:	02077713          	andi	a4,a4,32
+200008d2:	e319                	bnez	a4,200008d8 <.loop402+0x38>
+200008d4:	000787b7          	lui	a5,0x78
+200008d8:	5579                	li	a0,-2
+200008da:	eafb78e3          	bgeu	s6,a5,2000078a <FLASH_EEPROM_CMD+0xe8>
+200008de:	009b0733          	add	a4,s6,s1
+200008e2:	f8e7ffe3          	bgeu	a5,a4,20000880 <FLASH_EEPROM_CMD+0x1de>
+200008e6:	b555                	j	2000078a <FLASH_EEPROM_CMD+0xe8>
+200008e8:	4785                	li	a5,1
+200008ea:	f2f982e3          	beq	s3,a5,2000080e <FLASH_EEPROM_CMD+0x16c>
+200008ee:	85da                	mv	a1,s6
+200008f0:	452d                	li	a0,11
+200008f2:	3b05                	jal	20000622 <FLASH_ROM_ADDR>
+200008f4:	fff48993          	addi	s3,s1,-1 # 7ffff <_data_lma+0x7f097>
+200008f8:	e60485e3          	beqz	s1,20000762 <FLASH_EEPROM_CMD+0xc0>
+200008fc:	3329                	jal	20000606 <FLASH_ROM_IN>
+200008fe:	0039f793          	andi	a5,s3,3
+20000902:	eb91                	bnez	a5,20000916 <.loop402+0x76>
+20000904:	80042683          	lw	a3,-2048(s0)
+20000908:	00092703          	lw	a4,0(s2)
+2000090c:	00490793          	addi	a5,s2,4
+20000910:	e4e69ae3          	bne	a3,a4,20000764 <FLASH_EEPROM_CMD+0xc2>
+20000914:	893e                	mv	s2,a5
+20000916:	84ce                	mv	s1,s3
+20000918:	bff1                	j	200008f4 <.loop402+0x54>
+2000091a:	47b5                	li	a5,13
+2000091c:	00f99663          	bne	s3,a5,20000928 <.loop402+0x88>
+20000920:	0b900513          	li	a0,185
+20000924:	31c9                	jal	200005e6 <FLASH_ROM_BEG>
+20000926:	bd35                	j	20000762 <FLASH_EEPROM_CMD+0xc0>
+20000928:	47b1                	li	a5,12
+2000092a:	0ab00513          	li	a0,171
+2000092e:	fef98be3          	beq	s3,a5,20000924 <.loop402+0x84>
+20000932:	4799                	li	a5,6
+20000934:	04f99163          	bne	s3,a5,20000976 <.loop402+0xd6>
+20000938:	000805b7          	lui	a1,0x80
+2000093c:	00bb65b3          	or	a1,s6,a1
+20000940:	452d                	li	a0,11
+20000942:	31c5                	jal	20000622 <FLASH_ROM_ADDR>
+20000944:	4481                	li	s1,0
+20000946:	4b8d                	li	s7,3
+20000948:	49a1                	li	s3,8
+2000094a:	3975                	jal	20000606 <FLASH_ROM_IN>
+2000094c:	01749663          	bne	s1,s7,20000958 <.loop402+0xb8>
+20000950:	80042783          	lw	a5,-2048(s0)
+20000954:	00f92023          	sw	a5,0(s2)
+20000958:	0485                	addi	s1,s1,1
+2000095a:	ff3498e3          	bne	s1,s3,2000094a <.loop402+0xaa>
+2000095e:	80042783          	lw	a5,-2048(s0)
+20000962:	012b1713          	slli	a4,s6,0x12
+20000966:	00075563          	bgez	a4,20000970 <.loop402+0xd0>
+2000096a:	00f91223          	sh	a5,4(s2)
+2000096e:	bbd5                	j	20000762 <FLASH_EEPROM_CMD+0xc0>
+20000970:	00f92223          	sw	a5,4(s2)
+20000974:	b3fd                	j	20000762 <FLASH_EEPROM_CMD+0xc0>
+20000976:	479d                	li	a5,7
+20000978:	02f99963          	bne	s3,a5,200009aa <.loop402+0x10a>
+2000097c:	4581                	li	a1,0
+2000097e:	04b00513          	li	a0,75
+20000982:	3145                	jal	20000622 <FLASH_ROM_ADDR>
+20000984:	44bd                	li	s1,15
+20000986:	00092023          	sw	zero,0(s2)
+2000098a:	00092223          	sw	zero,4(s2)
+2000098e:	59fd                	li	s3,-1
+20000990:	399d                	jal	20000606 <FLASH_ROM_IN>
+20000992:	0074f793          	andi	a5,s1,7
+20000996:	97ca                	add	a5,a5,s2
+20000998:	0007c703          	lbu	a4,0(a5) # 78000 <_data_lma+0x77098>
+2000099c:	14fd                	addi	s1,s1,-1
+2000099e:	8d39                	xor	a0,a0,a4
+200009a0:	00a78023          	sb	a0,0(a5)
+200009a4:	ff3496e3          	bne	s1,s3,20000990 <.loop402+0xf0>
+200009a8:	bb6d                	j	20000762 <FLASH_EEPROM_CMD+0xc0>
+200009aa:	47a1                	li	a5,8
+200009ac:	04f99263          	bne	s3,a5,200009f0 <.loop402+0x150>
+200009b0:	396d                	jal	2000066a <FLASH_ROM_WAIT>
+200009b2:	4481                	li	s1,0
+200009b4:	000b0d63          	beqz	s6,200009ce <.loop402+0x12e>
+200009b8:	478d                	li	a5,3
+200009ba:	03c00493          	li	s1,60
+200009be:	00fb0863          	beq	s6,a5,200009ce <.loop402+0x12e>
+200009c2:	05000493          	li	s1,80
+200009c6:	018b0463          	beq	s6,s8,200009ce <.loop402+0x12e>
+200009ca:	04400493          	li	s1,68
+200009ce:	07c57513          	andi	a0,a0,124
+200009d2:	d89508e3          	beq	a0,s1,20000762 <FLASH_EEPROM_CMD+0xc0>
+200009d6:	4519                	li	a0,6
+200009d8:	3139                	jal	200005e6 <FLASH_ROM_BEG>
+200009da:	3939                	jal	200005f8 <FLASH_ROM_END>
+200009dc:	4505                	li	a0,1
+200009de:	3121                	jal	200005e6 <FLASH_ROM_BEG>
+200009e0:	8526                	mv	a0,s1
+200009e2:	390d                	jal	20000614 <FLASH_ROM_OUT>
+200009e4:	4509                	li	a0,2
+200009e6:	313d                	jal	20000614 <FLASH_ROM_OUT>
+200009e8:	3149                	jal	2000066a <FLASH_ROM_WAIT>
+200009ea:	d6051ce3          	bnez	a0,20000762 <FLASH_EEPROM_CMD+0xc0>
+200009ee:	bb69                	j	20000788 <FLASH_EEPROM_CMD+0xe6>
+200009f0:	4791                	li	a5,4
+200009f2:	00f99963          	bne	s3,a5,20000a04 <.loop402+0x164>
+200009f6:	06600513          	li	a0,102
+200009fa:	36f5                	jal	200005e6 <FLASH_ROM_BEG>
+200009fc:	3ef5                	jal	200005f8 <FLASH_ROM_END>
+200009fe:	09900513          	li	a0,153
+20000a02:	b70d                	j	20000924 <.loop402+0x84>
+20000a04:	d4098fe3          	beqz	s3,20000762 <FLASH_EEPROM_CMD+0xc0>
+20000a08:	54f1                	li	s1,-4
+20000a0a:	bba9                	j	20000764 <FLASH_EEPROM_CMD+0xc2>
+
+Disassembly of section .text:
+
+00000a10 <handle_reset>:
+handle_reset():
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:129
+	.weak	handle_reset
+	.align	1
+handle_reset:
+.option push 
+.option	norelax 
+	la gp, __global_pointer$
+ a10:	20001197          	auipc	gp,0x20001
+ a14:	80018193          	addi	gp,gp,-2048 # 20001210 <__global_pointer$>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:132
+.option	pop 
+1:
+	la sp, _eusrstack 
+ a18:	20007117          	auipc	sp,0x20007
+ a1c:	5e810113          	addi	sp,sp,1512 # 20008000 <_eusrstack>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:136
+
+/* Load highcode code  section from flash to RAM */
+2:
+    la a0, _highcode_lma
+ a20:	00400513          	li	a0,4
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:137
+    la a1, _highcode_vma_start
+ a24:	1ffff597          	auipc	a1,0x1ffff
+ a28:	5dc58593          	addi	a1,a1,1500 # 20000000 <_highcode_vma_start>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:138
+    la a2, _highcode_vma_end
+ a2c:	20000617          	auipc	a2,0x20000
+ a30:	fe060613          	addi	a2,a2,-32 # 20000a0c <_highcode_vma_end>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:139
+    bgeu a1, a2, 2f
+ a34:	00c5fa63          	bgeu	a1,a2,a48 <handle_reset+0x38>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:141
+1:
+    lw t0, (a0)
+ a38:	00052283          	lw	t0,0(a0)
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:142
+    sw t0, (a1)
+ a3c:	0055a023          	sw	t0,0(a1)
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:143
+    addi a0, a0, 4
+ a40:	0511                	addi	a0,a0,4
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:144
+    addi a1, a1, 4
+ a42:	0591                	addi	a1,a1,4
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:145
+    bltu a1, a2, 1b
+ a44:	fec5eae3          	bltu	a1,a2,a38 <handle_reset+0x28>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:149
+
+/* Load data section from flash to RAM */
+2:
+	la a0, _data_lma
+ a48:	00000517          	auipc	a0,0x0
+ a4c:	52050513          	addi	a0,a0,1312 # f68 <_data_lma>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:150
+	la a1, _data_vma
+ a50:	20000597          	auipc	a1,0x20000
+ a54:	fbc58593          	addi	a1,a1,-68 # 20000a0c <_highcode_vma_end>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:151
+	la a2, _edata
+ a58:	20000617          	auipc	a2,0x20000
+ a5c:	fb860613          	addi	a2,a2,-72 # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:152
+	bgeu a1, a2, 2f
+ a60:	00c5fa63          	bgeu	a1,a2,a74 <handle_reset+0x64>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:154
+1:
+	lw t0, (a0)
+ a64:	00052283          	lw	t0,0(a0)
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:155
+	sw t0, (a1)
+ a68:	0055a023          	sw	t0,0(a1)
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:156
+	addi a0, a0, 4
+ a6c:	0511                	addi	a0,a0,4
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:157
+	addi a1, a1, 4
+ a6e:	0591                	addi	a1,a1,4
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:158
+	bltu a1, a2, 1b
+ a70:	fec5eae3          	bltu	a1,a2,a64 <handle_reset+0x54>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:161
+2:
+	/* clear bss section */
+	la a0, _sbss
+ a74:	20000517          	auipc	a0,0x20000
+ a78:	f9c50513          	addi	a0,a0,-100 # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:162
+	la a1, _ebss
+ a7c:	80818593          	addi	a1,gp,-2040 # 20000a18 <_ebss>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:163
+	bgeu a0, a1, 2f
+ a80:	00b57763          	bgeu	a0,a1,a8e <handle_reset+0x7e>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:165
+1:
+	sw zero, (a0)
+ a84:	00052023          	sw	zero,0(a0)
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:166
+	addi a0, a0, 4
+ a88:	0511                	addi	a0,a0,4
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:167
+	bltu a0, a1, 1b
+ a8a:	feb56de3          	bltu	a0,a1,a84 <handle_reset+0x74>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:170
+2:
+	/* 流水线控制位 & 动态预测控制位 */
+	li t0, 0x1f
+ a8e:	42fd                	li	t0,31
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:171
+	csrw 0xbc0, t0
+ a90:	bc029073          	csrw	0xbc0,t0
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:173
+	/* 打开嵌套中断、硬件压栈功能 */
+	li t0, 0x3
+ a94:	428d                	li	t0,3
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:174
+	csrw 0x804, t0
+ a96:	80429073          	csrw	0x804,t0
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:176
+	
+    li t0, 0x88
+ a9a:	08800293          	li	t0,136
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:177
+    csrw mstatus, t0
+ a9e:	30029073          	csrw	mstatus,t0
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:178
+	la t0, _vector_base
+ aa2:	1ffff297          	auipc	t0,0x1ffff
+ aa6:	55e28293          	addi	t0,t0,1374 # 20000000 <_highcode_vma_start>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:181
+
+	/* 配置向量表模式为绝对地址模式 */
+    ori t0, t0, 3
+ aaa:	0032e293          	ori	t0,t0,3
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:182
+	csrw mtvec, t0
+ aae:	30529073          	csrw	mtvec,t0
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:184
+
+	la t0, main
+ ab2:	00000297          	auipc	t0,0x0
+ ab6:	08428293          	addi	t0,t0,132 # b36 <main>
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:185
+	csrw mepc, t0
+ aba:	34129073          	csrw	mepc,t0
+D:\Work\WorkSpace\HelmetLock\obj/../Startup/startup_CH583.S:188
+	
+	
+	mret
+ abe:	30200073          	mret
+
+00000ac2 <Motor_Forward>:
+Motor_Forward():
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:6
+#include "Main.h"
+
+// 电机正转
+void Motor_Forward(void)
+{
+    GPIOA_SET_H(FI_PIN);
+ ac2:	400017b7          	lui	a5,0x40001
+ ac6:	0a87a703          	lw	a4,168(a5) # 400010a8 <_eusrstack+0x1fff90a8>
+ aca:	6685                	lui	a3,0x1
+ acc:	8f55                	or	a4,a4,a3
+ ace:	0ae7a423          	sw	a4,168(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:7
+    GPIOA_SET_L(BI_PIN);
+ ad2:	0ac7a703          	lw	a4,172(a5)
+ ad6:	40076713          	ori	a4,a4,1024
+ ada:	0ae7a623          	sw	a4,172(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:8
+}
+ ade:	8082                	ret
+
+00000ae0 <Motor_Reverse>:
+Motor_Reverse():
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:13
+
+// 电机反转
+void Motor_Reverse(void)
+{
+    GPIOA_SET_H(BI_PIN);
+ ae0:	400017b7          	lui	a5,0x40001
+ ae4:	0a87a703          	lw	a4,168(a5) # 400010a8 <_eusrstack+0x1fff90a8>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:14
+    GPIOA_SET_L(FI_PIN);
+ ae8:	6685                	lui	a3,0x1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:13
+    GPIOA_SET_H(BI_PIN);
+ aea:	40076713          	ori	a4,a4,1024
+ aee:	0ae7a423          	sw	a4,168(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:14
+    GPIOA_SET_L(FI_PIN);
+ af2:	0ac7a703          	lw	a4,172(a5)
+ af6:	8f55                	or	a4,a4,a3
+ af8:	0ae7a623          	sw	a4,172(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:15
+}
+ afc:	8082                	ret
+
+00000afe <Motor_Stop>:
+Motor_Stop():
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:20
+
+// 电机停止
+void Motor_Stop(void)
+{
+    GPIOA_SET_L(BI_PIN);
+ afe:	400017b7          	lui	a5,0x40001
+ b02:	0ac7a703          	lw	a4,172(a5) # 400010ac <_eusrstack+0x1fff90ac>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:21
+    GPIOA_SET_L(FI_PIN);
+ b06:	6685                	lui	a3,0x1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:20
+    GPIOA_SET_L(BI_PIN);
+ b08:	40076713          	ori	a4,a4,1024
+ b0c:	0ae7a623          	sw	a4,172(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:21
+    GPIOA_SET_L(FI_PIN);
+ b10:	0ac7a703          	lw	a4,172(a5)
+ b14:	8f55                	or	a4,a4,a3
+ b16:	0ae7a623          	sw	a4,172(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:22
+}
+ b1a:	8082                	ret
+
+00000b1c <Voice_Printf>:
+Voice_Printf():
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:26
+
+// 语音播报
+void Voice_Printf(uint8_t *buf)
+{
+ b1c:	1141                	addi	sp,sp,-16
+ b1e:	c422                	sw	s0,8(sp)
+ b20:	c606                	sw	ra,12(sp)
+ b22:	842a                	mv	s0,a0
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:27
+    uint16_t len = strlen(buf);
+ b24:	2659                	jal	eaa <strlen>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:28
+    UART1_SendString(buf, len);
+ b26:	01051593          	slli	a1,a0,0x10
+ b2a:	8522                	mv	a0,s0
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:29
+}
+ b2c:	4422                	lw	s0,8(sp)
+ b2e:	40b2                	lw	ra,12(sp)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:28
+    UART1_SendString(buf, len);
+ b30:	81c1                	srli	a1,a1,0x10
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:29
+}
+ b32:	0141                	addi	sp,sp,16
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:28
+    UART1_SendString(buf, len);
+ b34:	a6b9                	j	e82 <UART1_SendString>
+
+00000b36 <main>:
+main():
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:32
+
+int main(void)
+{
+ b36:	1101                	addi	sp,sp,-32
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:34
+    // 开时钟
+    SetSysClock(CLK_SOURCE_PLL_60MHz);
+ b38:	04800513          	li	a0,72
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:32
+{
+ b3c:	ce06                	sw	ra,28(sp)
+ b3e:	cc22                	sw	s0,24(sp)
+ b40:	c84a                	sw	s2,16(sp)
+ b42:	c64e                	sw	s3,12(sp)
+ b44:	c452                	sw	s4,8(sp)
+ b46:	c256                	sw	s5,4(sp)
+ b48:	c05a                	sw	s6,0(sp)
+ b4a:	ca26                	sw	s1,20(sp)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:34
+    SetSysClock(CLK_SOURCE_PLL_60MHz);
+ b4c:	1ffff097          	auipc	ra,0x1ffff
+ b50:	546080e7          	jalr	1350(ra) # 20000092 <SetSysClock>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:37
+
+    // PA10->BI PA12->FI
+    GPIOA_ModeCfg(BI_PIN, GPIO_ModeOut_PP_20mA);
+ b54:	4591                	li	a1,4
+ b56:	40000513          	li	a0,1024
+ b5a:	2af9                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:38
+    GPIOA_ModeCfg(FI_PIN, GPIO_ModeOut_PP_20mA);
+ b5c:	4591                	li	a1,4
+ b5e:	6505                	lui	a0,0x1
+ b60:	2ae1                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:40
+    // 读上锁到位信号
+    GPIOA_ModeCfg(LOCK_PIN, GPIO_ModeIN_PU);
+ b62:	4585                	li	a1,1
+ b64:	08000513          	li	a0,128
+ b68:	2ac1                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:42
+    // 读解锁到位信号
+    GPIOA_ModeCfg(UNLOCK_PIN, GPIO_ModeIN_PU);
+ b6a:	6505                	lui	a0,0x1
+ b6c:	4585                	li	a1,1
+ b6e:	80050513          	addi	a0,a0,-2048 # 800 <__stack_size+0x600>
+ b72:	22d9                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:44
+    // 读干簧管信号
+    GPIOA_ModeCfg(REEDSWITCH_PIN, GPIO_ModeIN_PU);
+ b74:	4585                	li	a1,1
+ b76:	4505                	li	a0,1
+ b78:	22c1                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:47
+
+    // 串口初始化 PA8->RX(接收) PA9->TX(发送)
+    GPIOA_SET_H(UART1_TX_PIN);
+ b7a:	40001737          	lui	a4,0x40001
+ b7e:	0a872783          	lw	a5,168(a4) # 400010a8 <_eusrstack+0x1fff90a8>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:48
+    GPIOA_ModeCfg(UART1_RX_PIN, GPIO_ModeIN_PU);
+ b82:	4585                	li	a1,1
+ b84:	10000513          	li	a0,256
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:47
+    GPIOA_SET_H(UART1_TX_PIN);
+ b88:	2007e793          	ori	a5,a5,512
+ b8c:	0af72423          	sw	a5,168(a4)
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:48
+    GPIOA_ModeCfg(UART1_RX_PIN, GPIO_ModeIN_PU);
+ b90:	2265                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:49
+    GPIOA_ModeCfg(UART1_TX_PIN, GPIO_ModeOut_PP_5mA);
+ b92:	458d                	li	a1,3
+ b94:	20000513          	li	a0,512
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:147
+        else
+        {
+            Motor_Stop();
+            // printf("未检测到头盔\r\n");
+            Voice_Printf("<G>未检测到头盔");
+            DelayMs(3000);
+ b98:	6405                	lui	s0,0x1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:49
+    GPIOA_ModeCfg(UART1_TX_PIN, GPIO_ModeOut_PP_5mA);
+ b9a:	2a79                	jal	d38 <GPIOA_ModeCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:54
+        if (GPIOA_READ_PIN(REEDSWITCH_PIN) == 0) // 读到干簧管信号为0 表示头盔放下
+ b9c:	40001937          	lui	s2,0x40001
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:50
+    UART1_DefInit();
+ ba0:	2c45                	jal	e50 <UART1_DefInit>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:61
+            for (i = 1; i <= TIMEOUT; i++)
+ ba2:	4985                	li	s3,1
+ ba4:	02900a13          	li	s4,41
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:89
+                if ((GPIOA_READ_PIN(UNLOCK_PIN) == 0) && (Motor_State_Flag == 1))
+ ba8:	80040b13          	addi	s6,s0,-2048 # 800 <__stack_size+0x600>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:91
+                    Correct_Count += 2;
+ bac:	20000a97          	auipc	s5,0x20000
+ bb0:	e64a8a93          	addi	s5,s5,-412 # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:54
+        if (GPIOA_READ_PIN(REEDSWITCH_PIN) == 0) // 读到干簧管信号为0 表示头盔放下
+ bb4:	0a492783          	lw	a5,164(s2) # 400010a4 <_eusrstack+0x1fff90a4>
+ bb8:	8b85                	andi	a5,a5,1
+ bba:	16079663          	bnez	a5,d26 <main+0x1f0>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:58
+            Motor_Forward();
+ bbe:	3711                	jal	ac2 <Motor_Forward>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:61
+            for (i = 1; i <= TIMEOUT; i++)
+ bc0:	4485                	li	s1,1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:59
+            Motor_State_Flag = 0;
+ bc2:	20000797          	auipc	a5,0x20000
+ bc6:	e40787a3          	sb	zero,-433(a5) # 20000a11 <Motor_State_Flag>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:63
+                if ((GPIOA_READ_PIN(LOCK_PIN) == 0) && (Motor_State_Flag == 0))
+ bca:	0a492783          	lw	a5,164(s2)
+ bce:	0807f793          	andi	a5,a5,128
+ bd2:	12079463          	bnez	a5,cfa <main+0x1c4>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:63 (discriminator 1)
+ bd6:	20000797          	auipc	a5,0x20000
+ bda:	e3b7c783          	lbu	a5,-453(a5) # 20000a11 <Motor_State_Flag>
+ bde:	10079e63          	bnez	a5,cfa <main+0x1c4>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:65
+                    Correct_Count += 1;
+ be2:	000ac783          	lbu	a5,0(s5)
+ be6:	0785                	addi	a5,a5,1
+ be8:	20000717          	auipc	a4,0x20000
+ bec:	e2f70423          	sb	a5,-472(a4) # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:66
+                    Motor_Stop();
+ bf0:	3739                	jal	afe <Motor_Stop>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:68
+                    Voice_Printf("<G>上锁成功");
+ bf2:	00000517          	auipc	a0,0x0
+ bf6:	2ca50513          	addi	a0,a0,714 # ebc <strlen+0x12>
+ bfa:	370d                	jal	b1c <Voice_Printf>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:69
+                    DelayMs(3000);
+ bfc:	bb840513          	addi	a0,s0,-1096
+ c00:	20000097          	auipc	ra,0x20000
+ c04:	9be080e7          	jalr	-1602(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:75
+            if (i >= TIMEOUT)
+ c08:	02800793          	li	a5,40
+ c0c:	00f49e63          	bne	s1,a5,c28 <main+0xf2>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:77
+                Motor_Stop();
+ c10:	35fd                	jal	afe <Motor_Stop>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:79
+                Voice_Printf("<G>上锁失败");
+ c12:	00000517          	auipc	a0,0x0
+ c16:	2b650513          	addi	a0,a0,694 # ec8 <strlen+0x1e>
+ c1a:	3709                	jal	b1c <Voice_Printf>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:80
+                DelayMs(3000);
+ c1c:	bb840513          	addi	a0,s0,-1096
+ c20:	20000097          	auipc	ra,0x20000
+ c24:	99e080e7          	jalr	-1634(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:84
+            Motor_Reverse();
+ c28:	3d65                	jal	ae0 <Motor_Reverse>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:85
+            Motor_State_Flag = 1;
+ c2a:	4785                	li	a5,1
+ c2c:	20000717          	auipc	a4,0x20000
+ c30:	def702a3          	sb	a5,-539(a4) # 20000a11 <Motor_State_Flag>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:87
+            for (i = 1; i <= TIMEOUT; i++)
+ c34:	4485                	li	s1,1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:89
+                if ((GPIOA_READ_PIN(UNLOCK_PIN) == 0) && (Motor_State_Flag == 1))
+ c36:	0a492783          	lw	a5,164(s2)
+ c3a:	0167f7b3          	and	a5,a5,s6
+ c3e:	ebe9                	bnez	a5,d10 <main+0x1da>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:89 (discriminator 1)
+ c40:	20000797          	auipc	a5,0x20000
+ c44:	dd17c783          	lbu	a5,-559(a5) # 20000a11 <Motor_State_Flag>
+ c48:	0d379463          	bne	a5,s3,d10 <main+0x1da>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:91
+                    Correct_Count += 2;
+ c4c:	000ac783          	lbu	a5,0(s5)
+ c50:	0789                	addi	a5,a5,2
+ c52:	20000717          	auipc	a4,0x20000
+ c56:	daf70f23          	sb	a5,-578(a4) # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:92
+                    Motor_Stop();
+ c5a:	3555                	jal	afe <Motor_Stop>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:94
+                    Voice_Printf("<G>解锁成功");
+ c5c:	00000517          	auipc	a0,0x0
+ c60:	27850513          	addi	a0,a0,632 # ed4 <strlen+0x2a>
+ c64:	3d65                	jal	b1c <Voice_Printf>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:95
+                    DelayMs(3000);
+ c66:	bb840513          	addi	a0,s0,-1096
+ c6a:	20000097          	auipc	ra,0x20000
+ c6e:	954080e7          	jalr	-1708(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:101
+            if (i >= TIMEOUT)
+ c72:	02800793          	li	a5,40
+ c76:	00f49e63          	bne	s1,a5,c92 <main+0x15c>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:103
+                Motor_Stop();
+ c7a:	3551                	jal	afe <Motor_Stop>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:105
+                Voice_Printf("<G>解锁失败");
+ c7c:	00000517          	auipc	a0,0x0
+ c80:	26450513          	addi	a0,a0,612 # ee0 <strlen+0x36>
+ c84:	3d61                	jal	b1c <Voice_Printf>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:106
+                DelayMs(3000);
+ c86:	bb840513          	addi	a0,s0,-1096
+ c8a:	20000097          	auipc	ra,0x20000
+ c8e:	934080e7          	jalr	-1740(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:109
+            if (Correct_Count == 0)
+ c92:	20000797          	auipc	a5,0x20000
+ c96:	d7e7c783          	lbu	a5,-642(a5) # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:112
+                Voice_Printf("<G>上锁解锁都失败");
+ c9a:	00000517          	auipc	a0,0x0
+ c9e:	25250513          	addi	a0,a0,594 # eec <strlen+0x42>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:109
+            if (Correct_Count == 0)
+ ca2:	c395                	beqz	a5,cc6 <main+0x190>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:118
+                Voice_Printf("<G>上锁成功，解锁失败");
+ ca4:	00000517          	auipc	a0,0x0
+ ca8:	25c50513          	addi	a0,a0,604 # f00 <strlen+0x56>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:115
+            else if (Correct_Count == 1)
+ cac:	01378d63          	beq	a5,s3,cc6 <main+0x190>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:121
+            else if (Correct_Count == 2)
+ cb0:	4709                	li	a4,2
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:124
+                Voice_Printf("<G>解锁成功，上锁失败");
+ cb2:	00000517          	auipc	a0,0x0
+ cb6:	26650513          	addi	a0,a0,614 # f18 <strlen+0x6e>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:121
+            else if (Correct_Count == 2)
+ cba:	00e78663          	beq	a5,a4,cc6 <main+0x190>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:130
+                Voice_Printf("<G>上锁解锁都成功");
+ cbe:	00000517          	auipc	a0,0x0
+ cc2:	27250513          	addi	a0,a0,626 # f30 <strlen+0x86>
+ cc6:	3d99                	jal	b1c <Voice_Printf>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:131
+                DelayMs(4000);
+ cc8:	fa040513          	addi	a0,s0,-96
+ ccc:	20000097          	auipc	ra,0x20000
+ cd0:	8f2080e7          	jalr	-1806(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:134
+            Correct_Count = 0;
+ cd4:	20000797          	auipc	a5,0x20000
+ cd8:	d2078e23          	sb	zero,-708(a5) # 20000a10 <_edata>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:137
+            Motor_Forward();
+ cdc:	33dd                	jal	ac2 <Motor_Forward>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:138
+            DelayMs(50);
+ cde:	03200513          	li	a0,50
+ ce2:	20000097          	auipc	ra,0x20000
+ ce6:	8dc080e7          	jalr	-1828(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:139
+            Motor_Stop();
+ cea:	3d11                	jal	afe <Motor_Stop>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:140
+            DelayMs(1000);
+ cec:	3e800513          	li	a0,1000
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:147
+            DelayMs(3000);
+ cf0:	20000097          	auipc	ra,0x20000
+ cf4:	8ce080e7          	jalr	-1842(ra) # 200005be <mDelaymS>
+ cf8:	bd75                	j	bb4 <main+0x7e>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:61 (discriminator 2)
+            for (i = 1; i <= TIMEOUT; i++)
+ cfa:	0485                	addi	s1,s1,1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:72 (discriminator 2)
+                DelayMs(5);
+ cfc:	4515                	li	a0,5
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:61 (discriminator 2)
+            for (i = 1; i <= TIMEOUT; i++)
+ cfe:	0ff4f493          	andi	s1,s1,255
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:72 (discriminator 2)
+                DelayMs(5);
+ d02:	20000097          	auipc	ra,0x20000
+ d06:	8bc080e7          	jalr	-1860(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:61 (discriminator 2)
+            for (i = 1; i <= TIMEOUT; i++)
+ d0a:	ed4490e3          	bne	s1,s4,bca <main+0x94>
+ d0e:	b709                	j	c10 <main+0xda>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:87 (discriminator 2)
+            for (i = 1; i <= TIMEOUT; i++)
+ d10:	0485                	addi	s1,s1,1
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:98 (discriminator 2)
+                DelayMs(5);
+ d12:	4515                	li	a0,5
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:87 (discriminator 2)
+            for (i = 1; i <= TIMEOUT; i++)
+ d14:	0ff4f493          	andi	s1,s1,255
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:98 (discriminator 2)
+                DelayMs(5);
+ d18:	20000097          	auipc	ra,0x20000
+ d1c:	8a6080e7          	jalr	-1882(ra) # 200005be <mDelaymS>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:87 (discriminator 2)
+            for (i = 1; i <= TIMEOUT; i++)
+ d20:	f1449be3          	bne	s1,s4,c36 <main+0x100>
+ d24:	bf99                	j	c7a <main+0x144>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:144
+            Motor_Stop();
+ d26:	3be1                	jal	afe <Motor_Stop>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:146
+            Voice_Printf("<G>未检测到头盔");
+ d28:	00000517          	auipc	a0,0x0
+ d2c:	21c50513          	addi	a0,a0,540 # f44 <strlen+0x9a>
+ d30:	33f5                	jal	b1c <Voice_Printf>
+D:\Work\WorkSpace\HelmetLock\obj/../src/Main.c:147
+            DelayMs(3000);
+ d32:	bb840513          	addi	a0,s0,-1096
+ d36:	bf6d                	j	cf0 <main+0x1ba>
+
+00000d38 <GPIOA_ModeCfg>:
+GPIOA_ModeCfg():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:27
+ *
+ * @return  none
+ */
+void GPIOA_ModeCfg(uint32_t pin, GPIOModeTypeDef mode)
+{
+    switch(mode)
+ d38:	4791                	li	a5,4
+ d3a:	02b7ee63          	bltu	a5,a1,d76 <GPIOA_ModeCfg+0x3e>
+ d3e:	00000717          	auipc	a4,0x0
+ d42:	21670713          	addi	a4,a4,534 # f54 <strlen+0xaa>
+ d46:	058a                	slli	a1,a1,0x2
+ d48:	95ba                	add	a1,a1,a4
+ d4a:	419c                	lw	a5,0(a1)
+ d4c:	97ba                	add	a5,a5,a4
+ d4e:	8782                	jr	a5
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:30
+    {
+        case GPIO_ModeIN_Floating:
+            R32_PA_PD_DRV &= ~pin;
+ d50:	400017b7          	lui	a5,0x40001
+ d54:	0b47a703          	lw	a4,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ d58:	fff54513          	not	a0,a0
+ d5c:	8f69                	and	a4,a4,a0
+ d5e:	0ae7aa23          	sw	a4,180(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:31
+            R32_PA_PU &= ~pin;
+ d62:	0b07a703          	lw	a4,176(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:43
+            R32_PA_DIR &= ~pin;
+            break;
+
+        case GPIO_ModeIN_PD:
+            R32_PA_PD_DRV |= pin;
+            R32_PA_PU &= ~pin;
+ d66:	8f69                	and	a4,a4,a0
+ d68:	0ae7a823          	sw	a4,176(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:44
+            R32_PA_DIR &= ~pin;
+ d6c:	0a07a703          	lw	a4,160(a5)
+ d70:	8d79                	and	a0,a0,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:54
+            R32_PA_DIR |= pin;
+            break;
+
+        case GPIO_ModeOut_PP_20mA:
+            R32_PA_PD_DRV |= pin;
+            R32_PA_DIR |= pin;
+ d72:	0aa7a023          	sw	a0,160(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:60
+            break;
+
+        default:
+            break;
+    }
+}
+ d76:	8082                	ret
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:36
+            R32_PA_PD_DRV &= ~pin;
+ d78:	400017b7          	lui	a5,0x40001
+ d7c:	0b47a683          	lw	a3,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ d80:	fff54713          	not	a4,a0
+ d84:	8ef9                	and	a3,a3,a4
+ d86:	0ad7aa23          	sw	a3,180(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:37
+            R32_PA_PU |= pin;
+ d8a:	0b07a683          	lw	a3,176(a5)
+ d8e:	8d55                	or	a0,a0,a3
+ d90:	0aa7a823          	sw	a0,176(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:38
+            R32_PA_DIR &= ~pin;
+ d94:	0a07a683          	lw	a3,160(a5)
+ d98:	8f75                	and	a4,a4,a3
+ d9a:	0ae7a023          	sw	a4,160(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:39
+            break;
+ d9e:	8082                	ret
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:42
+            R32_PA_PD_DRV |= pin;
+ da0:	400017b7          	lui	a5,0x40001
+ da4:	0b47a703          	lw	a4,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ da8:	8f49                	or	a4,a4,a0
+ daa:	0ae7aa23          	sw	a4,180(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:43
+            R32_PA_PU &= ~pin;
+ dae:	0b07a703          	lw	a4,176(a5)
+ db2:	fff54513          	not	a0,a0
+ db6:	bf45                	j	d66 <GPIOA_ModeCfg+0x2e>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:48
+            R32_PA_PD_DRV &= ~pin;
+ db8:	400017b7          	lui	a5,0x40001
+ dbc:	0b47a683          	lw	a3,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ dc0:	fff54713          	not	a4,a0
+ dc4:	8f75                	and	a4,a4,a3
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:53
+            R32_PA_PD_DRV |= pin;
+ dc6:	0ae7aa23          	sw	a4,180(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:54
+            R32_PA_DIR |= pin;
+ dca:	0a07a703          	lw	a4,160(a5)
+ dce:	8d59                	or	a0,a0,a4
+ dd0:	b74d                	j	d72 <GPIOA_ModeCfg+0x3a>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_gpio.c:53
+            R32_PA_PD_DRV |= pin;
+ dd2:	400017b7          	lui	a5,0x40001
+ dd6:	0b47a703          	lw	a4,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ dda:	8f49                	or	a4,a4,a0
+ ddc:	b7ed                	j	dc6 <GPIOA_ModeCfg+0x8e>
+
+00000dde <GetSysClock>:
+GetSysClock():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:117
+    rev = R16_CLK_SYS_CFG & 0xff;
+ dde:	400017b7          	lui	a5,0x40001
+ de2:	0087d503          	lhu	a0,8(a5) # 40001008 <_eusrstack+0x1fff9008>
+ de6:	0542                	slli	a0,a0,0x10
+ de8:	8141                	srli	a0,a0,0x10
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:118
+    if((rev & 0x40) == (0 << 6))
+ dea:	04057793          	andi	a5,a0,64
+ dee:	eb91                	bnez	a5,e02 <GetSysClock+0x24>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:120
+        return (32000000 / (rev & 0x1f));
+ df0:	01f57793          	andi	a5,a0,31
+ df4:	01e85537          	lui	a0,0x1e85
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:124
+        return (480000000 / (rev & 0x1f));
+ df8:	80050513          	addi	a0,a0,-2048 # 1e84800 <_data_lma+0x1e83898>
+ dfc:	02f54533          	div	a0,a0,a5
+ e00:	8082                	ret
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:122
+    else if((rev & RB_CLK_SYS_MOD) == (1 << 6))
+ e02:	0c057793          	andi	a5,a0,192
+ e06:	04000713          	li	a4,64
+ e0a:	00e79763          	bne	a5,a4,e18 <GetSysClock+0x3a>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:124
+        return (480000000 / (rev & 0x1f));
+ e0e:	01f57793          	andi	a5,a0,31
+ e12:	1c9c4537          	lui	a0,0x1c9c4
+ e16:	b7cd                	j	df8 <GetSysClock+0x1a>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:128
+        return (32000);
+ e18:	6521                	lui	a0,0x8
+ e1a:	d0050513          	addi	a0,a0,-768 # 7d00 <_data_lma+0x6d98>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_sys.c:130
+}
+ e1e:	8082                	ret
+
+00000e20 <UART1_BaudRateCfg>:
+UART1_BaudRateCfg():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:43
+ * @param   baudrate    - 波特率
+ *
+ * @return  none
+ */
+void UART1_BaudRateCfg(uint32_t baudrate)
+{
+ e20:	1141                	addi	sp,sp,-16
+ e22:	c422                	sw	s0,8(sp)
+ e24:	c606                	sw	ra,12(sp)
+ e26:	842a                	mv	s0,a0
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:46
+    uint32_t x;
+
+    x = 10 * GetSysClock() / 8 / baudrate;
+ e28:	3f5d                	jal	dde <GetSysClock>
+ e2a:	4729                	li	a4,10
+ e2c:	02e507b3          	mul	a5,a0,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:49
+    x = (x + 5) / 10;
+    R16_UART1_DL = (uint16_t)x;
+}
+ e30:	40b2                	lw	ra,12(sp)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:46
+    x = 10 * GetSysClock() / 8 / baudrate;
+ e32:	838d                	srli	a5,a5,0x3
+ e34:	0287d7b3          	divu	a5,a5,s0
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:49
+}
+ e38:	4422                	lw	s0,8(sp)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:47
+    x = (x + 5) / 10;
+ e3a:	0795                	addi	a5,a5,5
+ e3c:	02e7d7b3          	divu	a5,a5,a4
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:48
+    R16_UART1_DL = (uint16_t)x;
+ e40:	40003737          	lui	a4,0x40003
+ e44:	07c2                	slli	a5,a5,0x10
+ e46:	83c1                	srli	a5,a5,0x10
+ e48:	40f71623          	sh	a5,1036(a4) # 4000340c <_eusrstack+0x1fffb40c>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:49
+}
+ e4c:	0141                	addi	sp,sp,16
+ e4e:	8082                	ret
+
+00000e50 <UART1_DefInit>:
+UART1_DefInit():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:26
+    UART1_BaudRateCfg(115200);
+ e50:	6571                	lui	a0,0x1c
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:25
+{
+ e52:	1141                	addi	sp,sp,-16
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:26
+    UART1_BaudRateCfg(115200);
+ e54:	20050513          	addi	a0,a0,512 # 1c200 <_data_lma+0x1b298>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:25
+{
+ e58:	c606                	sw	ra,12(sp)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:26
+    UART1_BaudRateCfg(115200);
+ e5a:	37d9                	jal	e20 <UART1_BaudRateCfg>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:27
+    R8_UART1_FCR = (2 << 6) | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN; // FIFO打开，触发点4字节
+ e5c:	400037b7          	lui	a5,0x40003
+ e60:	f8700713          	li	a4,-121
+ e64:	40e78123          	sb	a4,1026(a5) # 40003402 <_eusrstack+0x1fffb402>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:28
+    R8_UART1_LCR = RB_LCR_WORD_SZ;
+ e68:	470d                	li	a4,3
+ e6a:	40e781a3          	sb	a4,1027(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:29
+    R8_UART1_IER = RB_IER_TXD_EN;
+ e6e:	04000713          	li	a4,64
+ e72:	40e780a3          	sb	a4,1025(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:30
+    R8_UART1_DIV = 1;
+ e76:	4705                	li	a4,1
+ e78:	40e78723          	sb	a4,1038(a5)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:31
+}
+ e7c:	40b2                	lw	ra,12(sp)
+ e7e:	0141                	addi	sp,sp,16
+ e80:	8082                	ret
+
+00000e82 <UART1_SendString>:
+UART1_SendString():
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:122
+{
+    uint16_t len = l;
+
+    while(len)
+    {
+        if(R8_UART1_TFC != UART_FIFO_SIZE)
+ e82:	400037b7          	lui	a5,0x40003
+ e86:	4721                	li	a4,8
+ e88:	400036b7          	lui	a3,0x40003
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:120
+    while(len)
+ e8c:	e191                	bnez	a1,e90 <UART1_SendString+0xe>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:128
+        {
+            R8_UART1_THR = *buf++;
+            len--;
+        }
+    }
+}
+ e8e:	8082                	ret
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:122
+        if(R8_UART1_TFC != UART_FIFO_SIZE)
+ e90:	40b7c603          	lbu	a2,1035(a5) # 4000340b <_eusrstack+0x1fffb40b>
+ e94:	fec70ce3          	beq	a4,a2,e8c <UART1_SendString+0xa>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:124
+            R8_UART1_THR = *buf++;
+ e98:	0505                	addi	a0,a0,1
+ e9a:	fff54603          	lbu	a2,-1(a0)
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:125
+            len--;
+ e9e:	15fd                	addi	a1,a1,-1
+ ea0:	05c2                	slli	a1,a1,0x10
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:124
+            R8_UART1_THR = *buf++;
+ ea2:	40c68423          	sb	a2,1032(a3) # 40003408 <_eusrstack+0x1fffb408>
+D:\Work\WorkSpace\HelmetLock\obj/../StdPeriphDriver/CH58x_uart1.c:125
+            len--;
+ ea6:	81c1                	srli	a1,a1,0x10
+ ea8:	b7d5                	j	e8c <UART1_SendString+0xa>
+
+00000eaa <strlen>:
+strlen():
+ eaa:	87aa                	mv	a5,a0
+ eac:	0785                	addi	a5,a5,1
+ eae:	fff7c703          	lbu	a4,-1(a5)
+ eb2:	ff6d                	bnez	a4,eac <strlen+0x2>
+ eb4:	40a78533          	sub	a0,a5,a0
+ eb8:	157d                	addi	a0,a0,-1
+ eba:	8082                	ret
+ ebc:	473c                	lw	a5,72(a4)
+ ebe:	c93e                	sw	a5,144(sp)
+ ec0:	b3f8cbcf          	fnmadd.d	fs7,fa7,ft11,fs6,rmm
+ ec4:	b9c9                	j	b96 <main+0x60>
+ ec6:	00a6                	slli	ra,ra,0x9
+ ec8:	473c                	lw	a5,72(a4)
+ eca:	c93e                	sw	a5,144(sp)
+ ecc:	caf8cbcf          	fnmadd.d	fs7,fa7,fa5,fs9,rmm
+ ed0:	00dcb0a7          	fsd	fa3,1(s9)
+ ed4:	473c                	lw	a5,72(a4)
+ ed6:	bd3e                	fsd	fa5,184(sp)
+ ed8:	cbe2                	sw	s8,212(sp)
+ eda:	b3f8                	fsd	fa4,224(a5)
+ edc:	b9c9                	j	bae <main+0x78>
+ ede:	00a6                	slli	ra,ra,0x9
+ ee0:	473c                	lw	a5,72(a4)
+ ee2:	bd3e                	fsd	fa5,184(sp)
+ ee4:	cbe2                	sw	s8,212(sp)
+ ee6:	caf8                	sw	a4,84(a3)
+ ee8:	00dcb0a7          	fsd	fa3,1(s9)
+ eec:	473c                	lw	a5,72(a4)
+ eee:	c93e                	sw	a5,144(sp)
+ ef0:	bdf8cbcf          	0xbdf8cbcf
+ ef4:	cbe2                	sw	s8,212(sp)
+ ef6:	b6f8                	fsd	fa4,232(a3)
+ ef8:	cabc                	sw	a5,80(a3)
+ efa:	00dcb0a7          	fsd	fa3,1(s9)
+ efe:	0000                	unimp
+ f00:	473c                	lw	a5,72(a4)
+ f02:	c93e                	sw	a5,144(sp)
+ f04:	b3f8cbcf          	fnmadd.d	fs7,fa7,ft11,fs6,rmm
+ f08:	b9c9                	j	bda <main+0xa4>
+ f0a:	a3a6                	fsd	fs1,448(sp)
+ f0c:	bdac                	fsd	fa1,120(a1)
+ f0e:	cbe2                	sw	s8,212(sp)
+ f10:	caf8                	sw	a4,84(a3)
+ f12:	00dcb0a7          	fsd	fa3,1(s9)
+ f16:	0000                	unimp
+ f18:	473c                	lw	a5,72(a4)
+ f1a:	bd3e                	fsd	fa5,184(sp)
+ f1c:	cbe2                	sw	s8,212(sp)
+ f1e:	b3f8                	fsd	fa4,224(a5)
+ f20:	b9c9                	j	bf2 <main+0xbc>
+ f22:	a3a6                	fsd	fs1,448(sp)
+ f24:	c9ac                	sw	a1,80(a1)
+ f26:	caf8cbcf          	fnmadd.d	fs7,fa7,fa5,fs9,rmm
+ f2a:	00dcb0a7          	fsd	fa3,1(s9)
+ f2e:	0000                	unimp
+ f30:	473c                	lw	a5,72(a4)
+ f32:	c93e                	sw	a5,144(sp)
+ f34:	bdf8cbcf          	0xbdf8cbcf
+ f38:	cbe2                	sw	s8,212(sp)
+ f3a:	b6f8                	fsd	fa4,232(a3)
+ f3c:	b3bc                	fsd	fa5,96(a5)
+ f3e:	b9c9                	j	c10 <main+0xda>
+ f40:	00a6                	slli	ra,ra,0x9
+ f42:	0000                	unimp
+ f44:	473c                	lw	a5,72(a4)
+ f46:	ce3e                	sw	a5,28(sp)
+ f48:	bcb4                	fsd	fa3,120(s1)
+ f4a:	b2ec                	fsd	fa1,224(a3)
+ f4c:	b5e2                	fsd	fs8,232(sp)
+ f4e:	cdbd                	beqz	a1,fcc <_data_lma+0x64>
+ f50:	00f8bfb7          	lui	t6,0xf8b
+ f54:	fdfc                	fsw	fa5,124(a1)
+ f56:	ffff                	0xffff
+ f58:	fe24                	fsw	fs1,120(a2)
+ f5a:	ffff                	0xffff
+ f5c:	fe4c                	fsw	fa1,60(a2)
+ f5e:	ffff                	0xffff
+ f60:	fe64                	fsw	fs1,124(a2)
+ f62:	ffff                	0xffff
+ f64:	fe7e                	fsw	ft11,60(sp)
+ f66:	ffff                	0xffff
